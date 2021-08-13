@@ -10,18 +10,12 @@ Getting that perfect fitment you wanted on your car takes a lot of trial and err
 
 In HYPEFITMENT, users will be able to:
 
-* Enter their current or OE (Original Equipment) setups.
-* Enter their new setups they would like.
-* See the comparsion between current and new setups in both graph and chart.
-* 
-
-
-
-* See the calculation of the attributes (tire width, profile, diameter, rim width, offset etc.) and check if their setups are valid.
-* 
-* List possible alternative setups.
-* See how their new setups will affect performance compared to their old setups.
-
+* Input their current or OE (Original Equipment) setups.
+* See how their new setups they would like.
+* See the comparsion between current and new setups in both graph and table.
+* Lock and edit certain attributes.
+* See the list of possible alternative setups that can be achieved.
+* Gain information on how their new setups will affect their cars' performance compared to their old setups.
 
 ## Wireframes
 
@@ -32,7 +26,7 @@ In HYPEFITMENT, users will be able to:
 * HTML
 * CSS
 * Javascript
-* Canvas API
+* Canvas API - I will be using it to render the graphical view of current and new setups. Users can also change certain attributes directly on them.
 * Fullscreen API
 * Webpack
 * Npm
@@ -40,18 +34,13 @@ In HYPEFITMENT, users will be able to:
 * DOM API
 
 ## Implementation Timeline
-* Friday Afternoon - Research more.
-* Weekend - Setup project, implement the logic/
-* Monday - Implement the logic.
-* Tuesday - Implement the UI.
-* Wednesday - Finish Up.
+* Friday Afternoon - Reasrch more and finish up setting up the project.
+* Weekend - Implement the user input.
+* Monday - Implement the grahpical part using Canvas.
+* Tuesday - Implement the table using D3.
+* Wednesday - Fix the last minute bugs.
 * Thursday Morning - Deploy to GitHub pages. 
 
 ## Bonus features
 
 If I have time left, I will use three.js to render setups in 3D.
-
-
-
-Explain why you are using canvas and what you are using it for
-Further breakdown each MVP and be specific with what exactly you are implementing in your timeline. Currently, it is far too vague

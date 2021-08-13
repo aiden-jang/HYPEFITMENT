@@ -4,7 +4,7 @@
 
 ## Background
 
-Getting that perfect fitment you wanted on your car takes a lot of trial and error. Have you ever wished there was a tool that visually calculates and shows the different wheel and tire setups before you drop $$$ on them? HYPEFITMENT eliminates the hassle. You do not need to waste time googling or digging the forums what kind of rims and tires setups will fit on your car or truck. It's all about the fitment.
+Getting that perfect fitment you wanted on your car takes a lot of trial and error. Have you ever wished there was a tool that visually calculates and shows the different rim and tire setups before you drop $$$ on them? HYPEFITMENT eliminates the hassle. You do not need to waste time googling or digging the forums what kind of rims and tires will fit your car or truck.
 
 ## Functionality & MVPs
 

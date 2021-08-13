@@ -43,4 +43,4 @@ In HYPEFITMENT, users will be able to:
 
 ## Bonus features
 
-If I have time left, I will use three.js to render the setup in 3D.
+If I have time left, I will use three.js to render setups in 3D.

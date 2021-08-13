@@ -4,16 +4,17 @@
 
 ## Background
 
-Getting that perfect fitment you wanted on your car takes a lot of trial and error. Have you ever wished there was a tool that visually calculates and shows the rim and tire setups before you drop $$$ on them? HYPEFITMENT eliminates the hassle. You do not need to waste time googling or digging the forums what kind of rims and tires will fit your car or truck.
+Getting that perfect fitment you wanted on your car takes a lot of trial and error. Have you ever wished there was a tool that visually calculates and shows the rim and tire setups before you drop $$$ on them? HYPEFITMENT eliminates the hassle. You do not need to waste time googling or digging in forums on what kind of rims and tires will fit your car or truck.
 
 ## Functionality & MVPs
 
 In HYPEFITMENT, users will be able to:
 
 * Input their current or OE (Original Equipment) setups.
-* See how their new setups they would like.
+* Input their new setups.
+* See how their new setups will look like.
 * See the comparsion between current and new setups in both graph and table.
-* Lock and edit certain attributes.
+* Lock and change the certain attributes.
 * See the list of possible alternative setups that can be achieved.
 * Gain information on how their new setups will affect their cars' performance compared to their old setups.
 
@@ -26,7 +27,7 @@ In HYPEFITMENT, users will be able to:
 * HTML
 * CSS
 * Javascript
-* Canvas API - I will be using it to render the graphical view of current and new setups. Users can also change certain attributes directly on them.
+* Canvas API - I will be using it to render the graphical view of the setups. Users can also change the certain attributes directly on them.
 * Fullscreen API
 * Webpack
 * Npm
@@ -35,12 +36,12 @@ In HYPEFITMENT, users will be able to:
 
 ## Implementation Timeline
 * Friday Afternoon - Reasrch more and finish up setting up the project.
-* Weekend - Implement the user input.
-* Monday - Implement the grahpical part using Canvas.
-* Tuesday - Implement the table using D3.
-* Wednesday - Fix the last minute bugs.
+* Weekend - Implement an user input.
+* Monday - Implement an grahpical diagram of setups using Canvas.
+* Tuesday - Implement a table using D3.
+* Wednesday - Fix last minute bugs.
 * Thursday Morning - Deploy to GitHub pages. 
 
 ## Bonus features
 
-If I have time left, I will use three.js to render setups in 3D.
+If I have time left, I will use three.js to render the setups in 3D.

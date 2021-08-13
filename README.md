@@ -35,7 +35,7 @@ In HYPEFITMENT, users will be able to:
 * DOM API
 
 ## Implementation Timeline
-* Friday Afternoon - Reasrch more and finish up setting up the project.
+* Friday Afternoon - Research more and finish up setting up the project.
 * Weekend - Implement an user input.
 * Monday - Implement an grahpical diagram of setups using Canvas.
 * Tuesday - Implement a table using D3.

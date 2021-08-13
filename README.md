@@ -10,11 +10,11 @@ Getting that perfect fitment you wanted on your car takes a lot of trial and err
 
 In HYPEFITMENT, users will be able to:
 
-* See the calculation of the attributes.
-* Visually see how their setups will look like.
+* See the calculation of the attributes (tire width, profile, diameter, rim width, offset etc.) and check if their setups are valid.
+* Grahpically see how their setups will look like.
 * Compare old and new setups in both graph and chart.
 * List possible alternative setups.
-* See how their setup will affect performance.
+* See how their new setups will affect performance compared to their old setups.
 
 
 ## Wireframes

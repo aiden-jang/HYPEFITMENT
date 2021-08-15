@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     canvas.width = window.innerWidth/1.2;
     canvas.height = window.innerHeight/1.3;
     
-    var oldWheel = new Wheel(275,40,18,9.5,8);
+    var oldWheel = new Wheel(245,40,18,9.5,8);
     var newWheel = new Wheel(295,40,19,10.5,15);
 
     // window.addEventListener("resize", () => {

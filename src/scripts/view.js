@@ -3,12 +3,15 @@ export default class View {
         this.ctx = ctx;
         this.wheel = wheel;
         this.canvas = canvas;
-        
+        this.rimColor = this.ctx.strokeStyle;
+        this.draw();
+    }
+
+    draw () {
         this.calculateRim();
         this.calculateTire();
         this.drawRim();
         this.drawTire();
-
     }
 
     drawSuspension() {
@@ -28,6 +31,8 @@ export default class View {
     }
 
     drawRim(){
+        this.ctx.strokeStyle = this.rimColor;
+
         this.ctx.beginPath(); 
         // right
         this.ctx.moveTo(this.rightX, this.topY);
@@ -61,6 +66,8 @@ export default class View {
     }
 
     drawTire() {
+
+        this.ctx.strokeStyle = "black";
         // top tire
         this.ctx.beginPath();
         //left top of a rim

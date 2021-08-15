@@ -47,8 +47,3 @@ export default class Wheel {
         this.RimOffset -= 1;
     }
 }
-
-
-
-
-

@@ -48,30 +48,30 @@ export default class View {
         var rimWidthMM = this.wheel.rimWidth * 25.4;
  
         if (this.wheel.tireWidth - rimWidthMM > 10) {
-            var leftTop = this.leftX + (rimWidthMM - this.wheel.tireWidth) /3
-            var rightTop = this.rightX  + (rimWidthMM - this.wheel.tireWidth) /3
+            var leftXTire = this.leftX + (rimWidthMM - this.wheel.tireWidth) /3
+            var rightXTire = this.rightX  - (rimWidthMM - this.wheel.tireWidth) /3
         } else {
-            var leftTop = this.leftX - (rimWidthMM - this.wheel.tireWidth) /3
-            var rightTop = this.rightX  - (rimWidthMM - this.wheel.tireWidth) /3
+            var leftXTire = this.leftX - (rimWidthMM - this.wheel.tireWidth) /3
+            var rightXTire = this.rightX  + (rimWidthMM - this.wheel.tireWidth) /3
         }
-        
+        this.topYTire = this.topY - this.wheel.tireProfile
         this.ctx.beginPath();
         //left top of the rim to left top of the tire
         this.ctx.moveTo(this.leftX, this.topY);
         //left top of the tire
-        this.ctx.lineTo(leftTop, this.topY - this.wheel.tireProfile);
+        this.ctx.lineTo(leftXTire, this.topYTire);
 
         //left top of the tire to right top of the tire
-        // this.ctx.bezierCurveTo(this.leftX, this.topY - this.wheel.tireProfile * 1.5,
-        //     this.rightX + 20, this.topY - this.wheel.tireProfile * 1.5,
-        //     this.rightTop, this.topY);
+        this.ctx.bezierCurveTo(this.leftX, this.topY - this.wheel.tireProfile * 1.5,
+            this.rightX, this.topY - this.wheel.tireProfile * 1.5,
+            rightXTire, this.topYTire);
 
         // right top of the tire to right top of the rim
         
 
         this.ctx.stroke();
         this.ctx.beginPath();
-        this.ctx.moveTo(rightTop, this.topY);
+        this.ctx.moveTo(rightXTire, this.topYTire);
         this.ctx.lineTo(this.rightX, this.topY);
         this.ctx.stroke();
 

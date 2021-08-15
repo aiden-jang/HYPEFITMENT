@@ -4,14 +4,18 @@ export default class View {
         this.wheel = wheel;
         this.canvas = canvas;
         
-        this.calculate();
+        this.calculateRim();
+        this.calculateTire();
         this.drawRim();
         this.drawTire();
 
     }
 
+    drawSuspension() {
 
-    calculate() {
+    }
+
+    calculateRim() {
         this.centerX = this.canvas.width / 2 + this.wheel.rimOffset;
         this.centerY = this.canvas.height / 2;
         this.lengthX = this.wheel.rimWidth * 8 ;
@@ -21,9 +25,6 @@ export default class View {
         this.rightX = this.centerX + this.lengthX;
         this.topY = this.centerY - this.lengthY;
         this.bottomY = this.centerY + this.lengthY;
-    }
-    drawSuspension() {
-
     }
 
     drawRim(){
@@ -44,46 +45,60 @@ export default class View {
         this.ctx.stroke();    
     }
 
-    drawTire() {
-        var rimWidthMM = this.wheel.rimWidth * 25.4;
- 
-        if (this.wheel.tireWidth - rimWidthMM > 10) {
-            var leftXTire = this.leftX + (rimWidthMM - this.wheel.tireWidth) /3
-            var rightXTire = this.rightX  - (rimWidthMM - this.wheel.tireWidth) /3
-        } else {
-            var leftXTire = this.leftX - (rimWidthMM - this.wheel.tireWidth) /3
-            var rightXTire = this.rightX  + (rimWidthMM - this.wheel.tireWidth) /3
-        }
-        this.topYTire = this.topY - this.wheel.tireProfile
-        this.ctx.beginPath();
-        //left top of the rim to left top of the tire
-        this.ctx.moveTo(this.leftX, this.topY);
-        //left top of the tire
-        this.ctx.lineTo(leftXTire, this.topYTire);
+    calculateTire() {
+        this.rimWidthMM = this.wheel.rimWidth * 25.4;
 
-        //left top of the tire to right top of the tire
+        if (this.wheel.tireWidth - this.rimWidthMM > 10) {
+            this.leftXTire = this.leftX + (this.rimWidthMM - this.wheel.tireWidth) /3
+            this.rightXTire = this.rightX  - (this.rimWidthMM - this.wheel.tireWidth) /3
+        } else {
+            this.leftXTire = this.leftX - (this.rimWidthMM - this.wheel.tireWidth) /3
+            this.rightXTire = this.rightX  + (this.rimWidthMM - this.wheel.tireWidth) /3
+        }
+
+        this.topYTire = this.topY - this.wheel.tireProfile;
+        this.bottomYTire = this.bottomY + this.wheel.tireProfile;
+    }
+
+    drawTire() {
+        // top tire
+        this.ctx.beginPath();
+        //left top of a rim
+        this.ctx.moveTo(this.leftX, this.topY);
+        //left top of a tire
+        this.ctx.lineTo(this.leftXTire, this.topYTire);
+
+        //left top to right top
         this.ctx.bezierCurveTo(this.leftX, this.topY - this.wheel.tireProfile * 1.5,
             this.rightX, this.topY - this.wheel.tireProfile * 1.5,
-            rightXTire, this.topYTire);
-
-        // right top of the tire to right top of the rim
-        
-
+            this.rightXTire, this.topYTire);
         this.ctx.stroke();
         this.ctx.beginPath();
-        this.ctx.moveTo(rightXTire, this.topYTire);
+        // right top of a tire
+        this.ctx.moveTo(this.rightXTire, this.topYTire);
+        // right top of a rim
         this.ctx.lineTo(this.rightX, this.topY);
         this.ctx.stroke();
 
+        // bottom tire
+        this.ctx.beginPath();
+        //left bottom of a rim
+        this.ctx.moveTo(this.leftX, this.bottomY);
+        //left bottom of a tire
+        this.ctx.lineTo(this.leftXTire, this.bottomYTire);
+        //left top to right top
+        this.ctx.bezierCurveTo(this.leftX, this.bottomY + this.wheel.tireProfile * 1.5,
+            this.rightX, this.bottomY + this.wheel.tireProfile * 1.5,
+            this.rightXTire, this.bottomYTire);
+        this.ctx.stroke();
+        this.ctx.beginPath();
+        // right bottom of a tire
+        this.ctx.moveTo(this.rightX, this.bottomY);
+        // right bottom of a rim
+        this.ctx.lineTo(this.rightXTire, this.bottomYTire);
+        this.ctx.stroke();
     }
 }
-    // var oldWheel = new Wheel(275,40,18,9.5,8);
-    // var newWheel = new Wheel(295,40,19,10.5,15);
-            // this.tireWidth = tireWidth; 275 // 295
-            // this.tireProfile = tireProfile; 40 // 40
-            // this.tireDiameter = tireDiameter; 18 // 19
-            // this.RimWidth = RimWidth;  9.5 // 10
-            // this.RimOffset = RimOffset; 8  // 15
 
 
 

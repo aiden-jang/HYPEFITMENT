@@ -1,10 +1,10 @@
 export default class Wheel {
-    constructor(tireWidth, tireProfile, tireDiameter, RimWidth, RimOffset) {
+    constructor(tireWidth, tireProfile, tireDiameter, rimWidth, rimOffset) {
             this.tireWidth = tireWidth;
             this.tireProfile = tireProfile;
             this.tireDiameter = tireDiameter;
-            this.RimWidth = RimWidth;
-            this.RimOffset = RimOffset;
+            this.rimWidth = rimWidth;
+            this.rimOffset = rimOffset;
         }
     
     incTireWidth () {

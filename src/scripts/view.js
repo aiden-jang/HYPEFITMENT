@@ -4,49 +4,53 @@ export default class View {
         this.wheel = wheel;
         this.canvas = canvas;
         
-        this.drawRim(this.ctx, this.wheel);
-        this.drawTire(this.ctx, this.wheel);
+        this.calculate();
+        this.drawRim();
+        this.drawTire();
 
     }
 
+
+    calculate() {
+        this.centerX = this.canvas.width / 2 + this.wheel.rimOffset;
+        this.centerY = this.canvas.height / 2;
+        this.lengthX = this.wheel.rimWidth * 8 ;
+        this.lengthY = this.wheel.tireDiameter * 6
+        
+        this.leftX = this.centerX - this.lengthX;
+        this.rightX = this.centerX + this.lengthX;
+        this.leftY = this.centerY - this.lengthY;
+        this.rightY = this.centerY + this.lengthY;
+    }
     drawSuspension() {
 
     }
 
-    drawRim(ctx){
-        var centerX = canvas.width / 2 + this.wheel.rimOffset;
-        var centerY = canvas.height / 2;
-        var lengthX = this.wheel.rimWidth * 8 ;
-        var lengthY = this.wheel.tireDiameter * 6
-        
-        var leftX = centerX - lengthX;
-        var rightX = centerX + lengthX;
-        var leftY = centerY - lengthY;
-        var rightY = centerY + lengthY;
-
-        ctx.beginPath(); 
+    drawRim(){
+        this.ctx.beginPath(); 
         // left
-        ctx.moveTo(leftX, leftY);
-        ctx.lineTo(leftX, rightY);
+        this.ctx.moveTo(this.leftX, this.leftY);
+        this.ctx.lineTo(this.leftX, this.rightY);
         // top
-        ctx.moveTo(leftX, leftY);
-        ctx.lineTo(rightX, leftY);
+        this.ctx.moveTo(this.leftX, this.leftY);
+        this.ctx.lineTo(this.rightX, this.leftY);
         // right
-        ctx.moveTo(rightX, leftY);
-        ctx.lineTo(rightX, rightY);
+        this.ctx.moveTo(this.rightX, this.leftY);
+        this.ctx.lineTo(this.rightX, this.rightY);
         // bottom
-        ctx.moveTo(rightX, rightY);
-        ctx.lineTo(leftX, rightY);
-        ctx.stroke();    
+        this.ctx.moveTo(this.rightX, this.rightY);
+        this.ctx.lineTo(this.leftX, this.rightY);
+
+        this.ctx.stroke();    
 
     }
 
-    drawTire(ctx, wheel) {
+    drawTire() {
 
-        ctx.beginPath();
-        ctx.moveTo(100, 20);
-        ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
-        ctx.stroke();
+        this.ctx.beginPath();
+        this.ctx.moveTo(100, 20);
+        this.ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
+        this.ctx.stroke();
     }
 }
     // var oldWheel = new Wheel(275,40,18,9.5,8);

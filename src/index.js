@@ -26,6 +26,15 @@ window.addEventListener("DOMContentLoaded", () => {
     input(ctx, canvas, oldWheel, oldWheelView, newWheelView);
     input(ctx, canvas, newWheel, oldWheelView, newWheelView);
 
+    // const displayCar = () => {
+    //     var x = document.getElementById("car");
+    //     if (x.style.display === "none") {
+    //       x.style.display = "block";
+    //     } else {
+    //       x.style.display = "none";
+    //     }
+    //   }
+    //   displayCar();
 
     // document.getElementById("test").addEventListener("click", function() {
     //        if (currentWheel === newWheel) {

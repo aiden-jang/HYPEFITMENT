@@ -28,10 +28,8 @@ In HYPEFITMENT, users will be able to:
 * CSS
 * Javascript
 * Canvas API - I will be using it to render the graphical view of the setups. Users can also change the certain attributes directly on them.
-* Fullscreen API
 * Webpack
 * Npm
-* D3
 * DOM API
 
 ## Implementation Timeline

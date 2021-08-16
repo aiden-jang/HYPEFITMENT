@@ -1,28 +1,29 @@
-export function input (ctx, canvas, oldWheel, oldWheelView, newWheelView) {
+export function input (ctx, canvas, wheel, oldWheelView, newWheelView) {
 
+    var wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
+    var wheelSpec = ` ${wheel.tireWidth}/${wheel.tireProfile}R${wheel.tireDiameter} x  ${wheel.rimWidth} ET${wheel.rimOffset}`
+    wheelValue.innerHTML = wheelSpec;
 
+    document.getElementById(`${wheel.status}` + "-tire-width").value = wheel.tireWidth;
+    document.getElementById(`${wheel.status}` + "-tire-profile").value = wheel.tireProfile;
+    document.getElementById(`${wheel.status}` + "-tire-diameter").value = wheel.tireDiameter;
+    document.getElementById(`${wheel.status}` + "-rim-width").value = wheel.rimWidth;
+    document.getElementById(`${wheel.status}` + "-rim-offset").value = wheel.rimOffset;
 
+    var tireWidth = document.getElementById(`${wheel.status}` + "-tire-width");
+    var tireWidthValue = document.getElementById(`${wheel.status}` + "-tire-width-value");
 
-    document.getElementById("tire-width").value = oldWheel.tireWidth;
-    document.getElementById("tire-profile").value = oldWheel.tireProfile;
-    document.getElementById("tire-diameter").value = oldWheel.tireDiameter;
-    document.getElementById("rim-width").value = oldWheel.rimWidth;
-    document.getElementById("rim-offset").value = oldWheel.rimOffset;
+    var tireProfile = document.getElementById(`${wheel.status}` + "-tire-profile");
+    var tireProfileValue = document.getElementById(`${wheel.status}` + "-tire-profile-value");
 
-    var tireWidth = document.getElementById("tire-width");
-    var tireWidthValue = document.getElementById("tire-width-value");
+    var tireDiameter = document.getElementById(`${wheel.status}` + "-tire-diameter");
+    var tireDiameterValue = document.getElementById(`${wheel.status}` + "-tire-diameter-value");
 
-    var tireProfile = document.getElementById("tire-profile");
-    var tireProfileValue = document.getElementById("tire-profile-value");
+    var rimWidth = document.getElementById(`${wheel.status}` + "-rim-width");
+    var rimWidthValue = document.getElementById(`${wheel.status}` + "-rim-width-value");
 
-    var tireDiameter = document.getElementById("tire-diameter");
-    var tireDiameterValue = document.getElementById("tire-diameter-value");
-
-    var rimWidth = document.getElementById("rim-width");
-    var rimWidthValue = document.getElementById("rim-width-value");
-
-    var rimOffset = document.getElementById("rim-offset");
-    var rimOffsetValue = document.getElementById("rim-offset-value");
+    var rimOffset = document.getElementById(`${wheel.status}` + "-rim-offset");
+    var rimOffsetValue = document.getElementById(`${wheel.status}` + "-rim-offset-value");
 
     tireWidthValue.innerHTML = tireWidth.value;
     tireProfileValue.innerHTML = tireProfile.value;
@@ -33,28 +34,28 @@ export function input (ctx, canvas, oldWheel, oldWheelView, newWheelView) {
 
     tireWidth.oninput = () => {
         tireWidthValue.innerHTML = tireWidth.value;
-        oldWheel.tireWidth = tireWidth.value;
+        wheel.tireWidth = tireWidth.value;
         view();
         output();
     }
 
     tireProfile.oninput = () => {
         tireProfileValue.innerHTML = tireProfile.value;
-        oldWheel.tireProfile = tireProfile.value;
+        wheel.tireProfile = tireProfile.value;
         view();
         output();
     }
 
     tireDiameter.oninput = () => {
         tireDiameterValue.innerHTML = tireDiameter.value;
-        oldWheel.tireDiameter = tireDiameter.value;
+        wheel.tireDiameter = tireDiameter.value;
         view();
         output();
     }
 
     rimWidth.oninput = () => {
         rimWidthValue.innerHTML = rimWidth.value;
-        oldWheel.rimWidth = rimWidth.value;
+        wheel.rimWidth = rimWidth.value;
         view();
         output();
     }
@@ -62,7 +63,7 @@ export function input (ctx, canvas, oldWheel, oldWheelView, newWheelView) {
 
     rimOffset.oninput = () => {
         rimOffsetValue.innerHTML = rimOffset.value;
-        oldWheel.rimOffset = rimOffset.value;
+        wheel.rimOffset = rimOffset.value;
         view();
         output();
     }
@@ -74,9 +75,9 @@ export function input (ctx, canvas, oldWheel, oldWheelView, newWheelView) {
     }
 
     function output () {
-        var oldWheelValue = document.getElementById("old-wheel-value");
-        var oldWheelSpec = ` ${oldWheel.tireWidth}/${oldWheel.tireProfile}R${oldWheel.tireDiameter}
-        x  ${oldWheel.rimWidth} ET${oldWheel.rimOffset}`
+        var oldWheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
+        var oldWheelSpec = ` ${wheel.tireWidth}/${wheel.tireProfile}R${wheel.tireDiameter}
+        x  ${wheel.rimWidth} ET${wheel.rimOffset}`
         oldWheelValue.innerHTML = oldWheelSpec;
     }
 }

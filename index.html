@@ -12,48 +12,46 @@
 </head>
 
 <body>
-    <h1>HYPEFITMENT</h1>
     <canvas id="canvas"></canvas>
-
+    <img src="./assets/suspension.png" id="suspension">
     <div class="slide-container">
         <div class="old-wheel">
             <h2>Current wheel</h2>
-            <label for="tire-width">Tire Width: <span id="tire-width-value"></span></label>
-            <input type="range" min="135" max="375" step="5" class="slider" id="tire-width">
+            <label for="tire-width">Tire Width: <span id="old-tire-width-value"></span></label>
+            <input type="range" min="135" max="375" step="5" class="slider" id="old-tire-width">
     
-            <label for="tire-profile">Tire Profile: <span id="tire-profile-value"></span></label>
-            <input type="range" min="20" max="90" step="5" class="slider" id="tire-profile">
+            <label for="tire-profile">Tire Profile: <span id="old-tire-profile-value"></span></label>
+            <input type="range" min="20" max="90" step="5" class="slider" id="old-tire-profile">
     
-            <label for="tire-diameter">Tire Diameter: <span id="tire-diameter-value"></span></label>
-            <input type="range" min="12" max="30" step="1" class="slider" id="tire-diameter">
+            <label for="tire-diameter">Tire Diameter: <span id="old-tire-diameter-value"></span></label>
+            <input type="range" min="12" max="30" step="1" class="slider" id="old-tire-diameter">
     
-            <label for="rim-width">Rim Width: <span id="rim-width-value"></span></label>
-            <input type="range" min="4" max="12.5" step="0.5" class="slider" id="rim-width">
+            <label for="rim-width">Rim Width: <span id="old-rim-width-value"></span></label>
+            <input type="range" min="4" max="12.5" step="0.5" class="slider" id="old-rim-width">
     
-            <label for="rim-offset">Rim Offset: <span id="rim-offset-value"></span></label>
-            <input type="range" min="-65" max="125" step="1" class="slider" id="rim-offset">
+            <label for="rim-offset">Rim Offset: <span id="old-rim-offset-value"></span></label>
+            <input type="range" min="-65" max="125" step="1" class="slider" id="old-rim-offset">
         </div>
 
         <div class="new-wheel">
             <h2>New wheel</h2>
-            <label for="tire-width">Tire Width: <span id="tire-width-value"></span></label>
-            <input type="range" min="135" max="375" step="5" class="slider" id="tire-width">
+            <label for="tire-width">Tire Width: <span id="new-tire-width-value"></span></label>
+            <input type="range" min="135" max="375" step="5" class="slider" id="new-tire-width">
     
-            <label for="tire-profile">Tire Profile: <span id="tire-profile-value"></span></label>
-            <input type="range" min="20" max="90" step="5" class="slider" id="tire-profile">
+            <label for="tire-profile">Tire Profile: <span id="new-tire-profile-value"></span></label>
+            <input type="range" min="20" max="90" step="5" class="slider" id="new-tire-profile">
     
-            <label for="tire-diameter">Tire Diameter: <span id="tire-diameter-value"></span></label>
-            <input type="range" min="12" max="30" step="1" class="slider" id="tire-diameter">
+            <label for="tire-diameter">Tire Diameter: <span id="new-tire-diameter-value"></span></label>
+            <input type="range" min="12" max="30" step="1" class="slider" id="new-tire-diameter">
     
-            <label for="rim-width">Rim Width: <span id="rim-width-value"></span></label>
-            <input type="range" min="4" max="12.5" step="0.5" class="slider" id="rim-width">
+            <label for="rim-width">Rim Width: <span id="new-rim-width-value"></span></label>
+            <input type="range" min="4" max="12.5" step="0.5" class="slider" id="new-rim-width">
     
-            <label for="rim-offset">Rim Offset: <span id="rim-offset-value"></span></label>
-            <input type="range" min="-65" max="125" step="1" class="slider" id="rim-offset">
+            <label for="rim-offset">Rim Offset: <span id="new-rim-offset-value"></span></label>
+            <input type="range" min="-65" max="125" step="1" class="slider" id="new-rim-offset">
         </div>
 
     </div>
-
 
     <div class="wheels-container">
         <label for="old-wheel">Old Wheel: <span id="old-wheel-value"></span></label>

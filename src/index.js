@@ -49,11 +49,22 @@ window.addEventListener("DOMContentLoaded", () => {
     //         oldWheelView.draw();
     //     }
     // });
-    var slider = document.getElementById("tire-width");
-    console.log(slider.value);
+
+    // var slider = document.getElementById("tire-width");
+    // var output = document.getElementById("tire-width-value");
+    // output.innerHTML = slider.value;
+    // console.log(slider.value);
     
+    // slider.oninput = () => {
+    //     output.innerHTML = this.value;
+    //     console.log(slider.value);
+    // }
+    var slider = document.getElementById("tire-width");
+    var output = document.getElementById("tire-width-value");
+    output.innerHTML = slider.value;
     slider.oninput = () => {
         console.log(slider.value);
+        output.innerHTML = slider.value;
     }
 });
 

@@ -1,6 +1,13 @@
-export function input (ctx, canvas, oldWheel, newWheel, oldWheelView, newWheelView) {
+export function input (ctx, canvas, oldWheel, oldWheelView, newWheelView) {
+
+
+
 
     document.getElementById("tire-width").value = oldWheel.tireWidth;
+    document.getElementById("tire-profile").value = oldWheel.tireProfile;
+    document.getElementById("tire-diameter").value = oldWheel.tireDiameter;
+    document.getElementById("rim-width").value = oldWheel.rimWidth;
+    document.getElementById("rim-offset").value = oldWheel.rimOffset;
 
     var tireWidth = document.getElementById("tire-width");
     var tireWidthValue = document.getElementById("tire-width-value");
@@ -28,24 +35,28 @@ export function input (ctx, canvas, oldWheel, newWheel, oldWheelView, newWheelVi
         tireWidthValue.innerHTML = tireWidth.value;
         oldWheel.tireWidth = tireWidth.value;
         view();
+        output();
     }
 
     tireProfile.oninput = () => {
         tireProfileValue.innerHTML = tireProfile.value;
         oldWheel.tireProfile = tireProfile.value;
         view();
+        output();
     }
 
     tireDiameter.oninput = () => {
         tireDiameterValue.innerHTML = tireDiameter.value;
         oldWheel.tireDiameter = tireDiameter.value;
         view();
+        output();
     }
 
     rimWidth.oninput = () => {
         rimWidthValue.innerHTML = rimWidth.value;
         oldWheel.rimWidth = rimWidth.value;
         view();
+        output();
     }
 
 
@@ -53,11 +64,19 @@ export function input (ctx, canvas, oldWheel, newWheel, oldWheelView, newWheelVi
         rimOffsetValue.innerHTML = rimOffset.value;
         oldWheel.rimOffset = rimOffset.value;
         view();
+        output();
     }
 
     function view () {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         newWheelView.draw();
         oldWheelView.draw();
+    }
+
+    function output () {
+        var oldWheelValue = document.getElementById("old-wheel-value");
+        var oldWheelSpec = ` ${oldWheel.tireWidth}/${oldWheel.tireProfile}R${oldWheel.tireDiameter}
+        x  ${oldWheel.rimWidth} ET${oldWheel.rimOffset}`
+        oldWheelValue.innerHTML = oldWheelSpec;
     }
 }

@@ -1,4 +1,12 @@
 
+
+.wheels-container{
+    position:relative;
+}
+
+.wheels-container > * {
+    display: flex;
+}
 .sliders-container{
     position: relative;
 

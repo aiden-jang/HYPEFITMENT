@@ -5,6 +5,7 @@ export default class View {
         this.canvas = canvas;
         this.rimColor = this.ctx.strokeStyle;
         this.draw();
+        
     }
 
     draw () {
@@ -12,12 +13,18 @@ export default class View {
         this.calculateTire();
         this.drawRim();
         this.drawTire();
+        this.drawSuspension();
     }
 
     drawSuspension() {
-
+        const background = new Image();
+        background.src = "../assets/suspension.png";
+        background.onload = function() {
+           this.ctx.drawImage(background, 370, -200, 700, 700);
+        }
     }
 
+    
     calculateRim() {
         this.centerX = this.canvas.width / 2 + this.wheel.rimOffset/2;
         this.centerY = this.canvas.height / 2;

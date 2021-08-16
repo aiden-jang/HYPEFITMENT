@@ -1,4 +1,4 @@
-import Input from "./scripts/input";
+import { input } from "./scripts/input";
 import View from "./scripts/view";
 import Wheel from "./scripts/wheel"
 
@@ -59,13 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
     //     output.innerHTML = this.value;
     //     console.log(slider.value);
     // }
-    var slider = document.getElementById("tire-width");
-    var output = document.getElementById("tire-width-value");
-    output.innerHTML = slider.value;
-    slider.oninput = () => {
-        console.log(slider.value);
-        output.innerHTML = slider.value;
-    }
+    input();
 });
 
 

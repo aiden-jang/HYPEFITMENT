@@ -19,7 +19,7 @@ export default class View {
     }
 
     calculateRim() {
-        this.centerX = this.canvas.width / 2 + this.wheel.rimOffset;
+        this.centerX = this.canvas.width / 2 + this.wheel.rimOffset/2;
         this.centerY = this.canvas.height / 2;
         this.lengthX = this.wheel.rimWidth * 8 ;
         this.lengthY = this.wheel.tireDiameter * 6
@@ -100,9 +100,9 @@ export default class View {
         this.ctx.stroke();
         this.ctx.beginPath();
         // right bottom of a tire
-        this.ctx.moveTo(this.rightX, this.bottomY);
+        this.ctx.moveTo(this.rightXTire, this.bottomYTire);
         // right bottom of a rim
-        this.ctx.lineTo(this.rightXTire, this.bottomYTire);
+        this.ctx.lineTo(this.rightX, this.bottomY);
         this.ctx.stroke();
     }
 }

@@ -8,28 +8,34 @@ window.addEventListener("DOMContentLoaded", () => {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight/1.3;
-    
-    var oldWheel = new Wheel(245,40,18,9.5,8);
+
+    var oldWheel = new Wheel(225,50,17,7.5,45);
     var newWheel = new Wheel(295,40,19,10.5,15);
-    var currentWheel = newWheel;
+    // var currentWheel = newWheel;
 
     // window.addEventListener("resize", () => {
     //     canvas.width = window.innerWidth/1.5;
     //     canvas.height = window.innerHeight/1.3;
     // });
 
+    // const background = new Image();
+    // background.src = "assets/suspension.jpg";
+    // background.onload = function() {
+    //     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+    // }
+
     ctx.strokeStyle = "red";
     var oldWheelView = new View(ctx, canvas, oldWheel);
     ctx.strokeStyle = "blue";
     var newWheelView = new View(ctx, canvas, newWheel);
 
-    // document.getElementById("test").addEventListener("click", function() {
+    input(ctx, canvas, oldWheel, newWheel, oldWheelView, newWheelView);
 
-    //     console.log(newWheel);
-    //     newWheel.decTireWidth();
-    //     console.log(newWheel);
-    //     newWheelView.draw();
-    // });
+    document.getElementById("test").addEventListener("click", function() {
+
+        console.log(oldWheel);
+
+    });
 
     // document.addEventListener("keydown", key => {
     //     console.log(key.code);
@@ -50,16 +56,9 @@ window.addEventListener("DOMContentLoaded", () => {
     //     }
     // });
 
-    // var slider = document.getElementById("tire-width");
-    // var output = document.getElementById("tire-width-value");
-    // output.innerHTML = slider.value;
-    // console.log(slider.value);
+
     
-    // slider.oninput = () => {
-    //     output.innerHTML = this.value;
-    //     console.log(slider.value);
-    // }
-    input();
+    // document.getElementById("tire-width").value = "10";
 });
 
 

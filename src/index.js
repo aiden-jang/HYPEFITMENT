@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
 
-    canvas.width = window.innerWidth/1.2;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight/1.3;
     
     var oldWheel = new Wheel(245,40,18,9.5,8);
@@ -31,25 +31,30 @@ window.addEventListener("DOMContentLoaded", () => {
     //     newWheelView.draw();
     // });
 
-    document.addEventListener("keydown", key => {
-        console.log(key.code);
-        if (key.code === "Space") {
-            if (currentWheel === newWheel) {
-                currentWheel = oldWheel;
-            } else {
-                currentWheel = newWheel;
-            }
-        }
-        if (key.code === "ArrowUp") {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            console.log(currentWheel);
-            currentWheel.decTireWidth();
-            console.log(currentWheel);
-            newWheelView.draw();
-            oldWheelView.draw();
-        }
-    });
-
+    // document.addEventListener("keydown", key => {
+    //     console.log(key.code);
+    //     if (key.code === "Space") {
+    //         if (currentWheel === newWheel) {
+    //             currentWheel = oldWheel;
+    //         } else {
+    //             currentWheel = newWheel;
+    //         }
+    //     }
+    //     if (key.code === "ArrowUp") {
+    //         ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //         console.log(currentWheel);
+    //         currentWheel.decTireWidth();
+    //         console.log(currentWheel);
+    //         newWheelView.draw();
+    //         oldWheelView.draw();
+    //     }
+    // });
+    var slider = document.getElementById("tire-width");
+    console.log(slider.value);
+    
+    slider.oninput = () => {
+        console.log(slider.value);
+    }
 });
 
 

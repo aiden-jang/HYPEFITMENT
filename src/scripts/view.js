@@ -53,7 +53,7 @@ export default class View {
     calculateTire() {
         this.rimWidthMM = this.wheel.rimWidth * 25.4;
 
-        if (this.wheel.tireWidth - this.rimWidthMM > 10) {
+        if (this.rimWidthMM - this.wheel.tireWidth < 0) {
             this.leftXTire = this.leftX + (this.rimWidthMM - this.wheel.tireWidth) /3
             this.rightXTire = this.rightX  - (this.rimWidthMM - this.wheel.tireWidth) /3
         } else {

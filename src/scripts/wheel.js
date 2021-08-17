@@ -9,42 +9,42 @@ export default class Wheel {
         }
     
     incTireWidth () {
-        this.tireWidth += 5;
+        if (this.tireWidth < 375) this.tireWidth += 5;
     }
 
     decTireWidth () {
-        this.tireWidth -= 5;
+        if (this.tireWidth > 135) this.tireWidth -= 5;
     }
 
     incTireProfile () {
-        this.tireProfile += 5;
+        if (this.tireProfile < 90) this.tireProfile += 5;
     }
 
     decTireProfile () {
-        this.tireProfile -= 5;
+        if (this.tireProfile > 20) this.tireProfile -= 5;
     }
 
     incTireDiameter () {
-        this.tireDiameter += 1;
+        if (this.tireDiameter < 30) this.tireDiameter += 1;
     }
 
     decTireDiameter () {
-        this.tireDiameter -= 1;
+        if (this.tireDiameter > 12) this.tireDiameter -= 1;
     }
 
     incRimWidth () {
-        this.rimWidth += 0.5;
+        if (this.rimWidth < 12.5) this.rimWidth += 0.5;
     }
 
     decRimWidth () {
-        this.rimWidth -= 0.5;
+        if (this.rimWidth > 4) this.rimWidth -= 0.5;
     }
     
     incRimOffset () {
-        this.rimOffset += 1;
+        if (this.rimOffset < 80) this.rimOffset += 1;
     }
 
     decRimOffset () {
-        this.rimOffset -= 1;
+        if (this.rimOffset > -65) this.rimOffset -= 1;
     }
 }

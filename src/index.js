@@ -32,6 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }, false);
 
     var index = 0;
+
     document.addEventListener("keydown", e => {
         // control(e, index, oldWheel, newWheel);        
 
@@ -72,7 +73,6 @@ window.addEventListener("DOMContentLoaded", () => {
             oldWheel.incRimOffset();
         }  else if (index === 5) {
             newWheel.incTireWidth();
-            current();
         }  else if (index === 6) {
             newWheel.incTireProfile();
         }  else if (index === 7) {
@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", () => {
             newWheel.incRimWidth();
         }  else if (index === 9) {
             newWheel.incRimOffset();
-        } 
+        }
     } else if (e.code === "ArrowLeft") {
         if (index === 0) {
             oldWheel.decTireWidth();
@@ -95,7 +95,6 @@ window.addEventListener("DOMContentLoaded", () => {
             oldWheel.decRimOffset();
         }  else if (index === 5) {
             newWheel.decTireWidth();
-            current();
         }  else if (index === 6) {
             newWheel.decTireProfile();
         }  else if (index === 7) {
@@ -106,15 +105,11 @@ window.addEventListener("DOMContentLoaded", () => {
             newWheel.decRimOffset();
         } 
     }
+        currentByIndex(index);
 
-
-
-
-    
         input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
         input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
         update();
-
      });
 
     const update = () => {
@@ -124,10 +119,45 @@ window.addEventListener("DOMContentLoaded", () => {
         newWheelView.drawWheel();
         
     };
-    const current = () => {
-        document.getElementById("new-tire-width").style.opacity = "1";
+
+    const currentByIndex = (idx) => {
+        var target = ""
+        switch(idx) {
+            case 0:
+                target = "old-tire-width";
+                break;
+            case 1:
+                target = "old-tire-profile";
+                break;
+            case 2:
+                target = "old-tire-diameter";
+                break;
+            case 3:
+                target = "old-rim-width";
+                break;
+            case 4:
+                target = "old-rim-offset";
+                break;
+            case 5:
+                target = "new-tire-width";
+                break;
+            case 6:
+                target = "new-tire-profile";
+                break;
+            case 7:
+                target = "new-tire-diameter";
+                break;
+            case 8:
+                target = "new-rim-width";
+                break;
+            case 9:
+                target = "new-rim-offset";
+                break;
+        }
+
+        document.getElementById(target).style.opacity = "1";
         setTimeout(function(){
-            document.getElementById("new-tire-width").style.opacity = "0.5";
-       }, 1000);
+            document.getElementById(target).style.opacity = "0.5";
+       }, 500);
     }
 });

@@ -8,13 +8,13 @@ export default class Wheel {
             this.status = status;
         }
     
-    // incTireWidth () {
-    //     this.tireWidth += 5;
-    // }
+    incTireWidth () {
+        this.tireWidth += 5;
+    }
 
-    // decTireWidth () {
-    //     this.tireWidth -= 5;
-    // }
+    decTireWidth () {
+        this.tireWidth -= 5;
+    }
 
     // incTireProfile () {
     //     this.tireProfile += 5;

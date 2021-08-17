@@ -1,6 +1,6 @@
 
 
-.wheels-container{
+/* .wheels-container{
     position:relative;
 }
 
@@ -14,14 +14,7 @@
 .slider {
     display: flex;
 
-}
-
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
+} */
 
 .slider {
   appearance: none;

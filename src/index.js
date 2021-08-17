@@ -1,71 +1,45 @@
 import { input } from "./scripts/input";
 import View from "./scripts/view";
 import Wheel from "./scripts/wheel"
+import Background from "./scripts/background"
 
 window.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
 
-    canvas.width = window.innerWidth/1.1;
-    canvas.height = window.innerHeight/1.1;
+    canvas.width = 750;
+    canvas.height = 500;
 
-    var oldWheel = new Wheel(225,50,17,7.5,45, "old");
-    var newWheel = new Wheel(295,40,19,10.5,15, "new");
+    var oldWheel = new Wheel(185,45,15,7.5,38, "old");
+    var newWheel = new Wheel(245,40,18,9,15, "new");
     
-    // window.addEventListener("resize", () => {
-    //     canvas.width = window.innerWidth/1.5;
-    //     canvas.height = window.innerHeight/1.3;
-    // });
 
-   
+    var background = new Background(ctx);
+    
     ctx.strokeStyle = "red";
-    var oldWheelView = new View(ctx, canvas, oldWheel);
+    var oldWheelView = new View(ctx, oldWheel);
     ctx.strokeStyle = "blue";
-    var newWheelView = new View(ctx, canvas, newWheel);
+    var newWheelView = new View(ctx, newWheel);
+    input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
+    input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
 
-    input(ctx, canvas, oldWheel, oldWheelView, newWheelView);
-    input(ctx, canvas, newWheel, oldWheelView, newWheelView);
+    window.addEventListener("keydown", e => {
+        if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+            e.preventDefault();
+        }
+    }, false);
 
-    // const displayCar = () => {
-    //     var x = document.getElementById("car");
-    //     if (x.style.display === "none") {
-    //       x.style.display = "block";
-    //     } else {
-    //       x.style.display = "none";
-    //     }
-    //   }
-    //   displayCar();
+    document.addEventListener("keydown", key => {
+        if (key.code === "ArrowUp") {
+            oldWheel.incTireWidth();
+        } else if (key.code === "ArrowDown") {
+            oldWheel.decTireWidth();
+        }
+        console.log(oldWheel.tireWidth)
+        input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
+        input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
+     });
 
-    // document.getElementById("test").addEventListener("click", function() {
-    //        if (currentWheel === newWheel) {
-    //             currentWheel = oldWheel;
-    //         } else {
-    //             currentWheel = newWheel;
-    //         }
-    //     input(ctx, canvas, currentWheel, newWheel, oldWheelView, newWheelView);
-    //     console.log(currentWheel);
-    //     console.log(oldWheel);
-    //     console.log(newWheel);
-    // });
-
-    // document.addEventListener("keydown", key => {
-    //     console.log(key.code);
-    //     if (key.code === "Space") {
-    //         if (currentWheel === newWheel) {
-    //             currentWheel = oldWheel;
-    //         } else {
-    //             currentWheel = newWheel;
-    //         }
-    //     }
-    //     if (key.code === "ArrowUp") {
-    //         ctx.clearRect(0, 0, canvas.width, canvas.height);
-    //         console.log(currentWheel);
-    //         currentWheel.decTireWidth();
-    //         console.log(currentWheel);
-    //         newWheelView.draw();
-    //         oldWheelView.draw();
-    //     }
-    // });
 });
 
 

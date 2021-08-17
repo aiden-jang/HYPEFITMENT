@@ -4,12 +4,6 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
-    position:absolute;
-    z-index: -1;
-};
-html, body {
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 #suspension, #car {

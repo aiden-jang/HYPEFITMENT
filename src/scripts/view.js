@@ -1,45 +1,33 @@
 export default class View {
-    constructor(ctx, canvas, wheel) {
+    constructor(ctx, wheel) {
         this.ctx = ctx;
         this.wheel = wheel;
-        this.canvas = canvas;
         this.rimColor = this.ctx.strokeStyle;
-        this.ctx.lineWidth = 5;
-        this.suspension = document.getElementById("suspension");
-        this.car = document.getElementById("car");
-        this.draw();
+        this.ctx.lineWidth = 2.5;
+
+        this.drawWheel();
     }
 
-    draw () {
-  
+    drawWheel () {
         this.calculateRim();
         this.calculateTire();
-        this.drawCar();
-        this.drawSuspension();
+        this.ctx.globalAlpha = 1;
         this.drawRim();
         this.drawTire();
     }
 
-    drawCar() {
-
-        // this.ctx.drawImage(this.car, this.centerX/1.7, -this.centerY*0.1, 500, 500);
-        }
-    drawSuspension() {
-        this.ctx.drawImage(this.suspension, this.centerX/1.7, -this.centerY*0.1, 500, 500);
-    }
-    
     calculateRim() {
         // Starting point
-        this.centerX = this.canvas.width / 3 ;
-        this.centerY = this.canvas.height / 1.8;
+        this.centerX = 260;
+        this.centerY = 300;
 
         // Rim sizes
         this.lengthX = this.wheel.rimWidth * 6.5;
         this.lengthY = this.wheel.tireDiameter * 5.5;
         
         // Xs and Ys of a rim
-        this.leftX = this.centerX - this.lengthX;
-        this.rightX = this.centerX + this.lengthX;
+        this.leftX = this.centerX - this.lengthX  + this.wheel.rimOffset / 2;
+        this.rightX = this.centerX + this.lengthX  + this.wheel.rimOffset / 2;
         this.topY = this.centerY - this.lengthY;
         this.bottomY = this.centerY + this.lengthY;
     }
@@ -64,11 +52,15 @@ export default class View {
 
         this.ctx.stroke();    
 
-        // rim offset
+        // rim center line
         this.ctx.beginPath();
-        this.ctx.setLineDash([5, 15]);
-        this.ctx.moveTo(this.centerX + this.wheel.rimOffset / 2, this.topY);
-        this.ctx.lineTo(this.centerX + this.wheel.rimOffset / 2, this.bottomY);
+        this.ctx.setLineDash([4, 15]);
+
+        this.ctx.moveTo(this.centerX, this.topY);
+        this.ctx.lineTo(this.centerX, this.bottomY);
+
+        // this.ctx.moveTo(this.centerX + this.wheel.rimOffset / 2, this.topY);
+        // this.ctx.lineTo(this.centerX + this.wheel.rimOffset / 2, this.bottomY);
         this.ctx.stroke();
         
     }
@@ -79,12 +71,11 @@ export default class View {
         this.leftXTire = this.leftX + (this.rimWidthMM - this.wheel.tireWidth) / 3;
         this.rightXTire = this.rightX  - (this.rimWidthMM - this.wheel.tireWidth) / 3;
 
-        this.topYTire = this.topY - this.wheel.tireProfile;
-        this.bottomYTire = this.bottomY - (-this.wheel.tireProfile);
+        this.topYTire = (this.topY - this.wheel.tireProfile);
+        this.bottomYTire = (this.bottomY - (-this.wheel.tireProfile));
     }
 
     drawTire() {
-
         this.ctx.strokeStyle = "black";
         this.ctx.setLineDash([]);
         // top tire
@@ -130,6 +121,3 @@ export default class View {
         this.ctx.stroke();
     }
 }
-
-
-

@@ -13,8 +13,10 @@
 
 <body>
     <canvas id="canvas"></canvas>
+
+    <img src="./assets/car.png" id="car">
     <img src="./assets/suspension.png" id="suspension">
-    <!-- <img src="./assets/car.png" id="car"> -->
+
     <div class="slide-container">
         <div class="old-wheel">
             <h2>Current wheel</h2>
@@ -31,7 +33,7 @@
             <input type="range" min="4" max="12.5" step="0.5" class="slider" id="old-rim-width">
     
             <label for="rim-offset">Rim Offset: <span id="old-rim-offset-value"></span></label>
-            <input type="range" min="-65" max="125" step="1" class="slider" id="old-rim-offset">
+            <input type="range" min="-65" max="80" step="1" class="slider" id="old-rim-offset">
         </div>
 
         <div class="new-wheel">
@@ -60,7 +62,7 @@
     </div>
     
     <div class="car-container">
-        <button id = "display-car" onclick="displayCar()">TEST</button>
+        <button id = "display-car" onclick="displayCar()">Show/Hide the Car</button>
     </div>
 </body>
 </html>

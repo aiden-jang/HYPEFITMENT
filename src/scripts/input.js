@@ -1,4 +1,4 @@
-export function input (ctx, canvas, wheel, oldWheelView, newWheelView) {
+export function input (ctx, canvas, wheel, oldWheelView, newWheelView, background) {
 
     var wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
     var wheelSpec = ` ${wheel.tireWidth}/${wheel.tireProfile}R${wheel.tireDiameter} x  ${wheel.rimWidth} ET${wheel.rimOffset}`
@@ -35,49 +35,44 @@ export function input (ctx, canvas, wheel, oldWheelView, newWheelView) {
     tireWidth.oninput = () => {
         tireWidthValue.innerHTML = tireWidth.value;
         wheel.tireWidth = tireWidth.value;
-        view();
-        output();
+        update();
     }
 
     tireProfile.oninput = () => {
         tireProfileValue.innerHTML = tireProfile.value;
         wheel.tireProfile = tireProfile.value;
-        view();
-        output();
+        update();
     }
 
     tireDiameter.oninput = () => {
         tireDiameterValue.innerHTML = tireDiameter.value;
         wheel.tireDiameter = tireDiameter.value;
-        view();
-        output();
+        update();
     }
 
     rimWidth.oninput = () => {
         rimWidthValue.innerHTML = rimWidth.value;
         wheel.rimWidth = rimWidth.value;
-        view();
-        output();
+        update();
     }
 
 
     rimOffset.oninput = () => {
         rimOffsetValue.innerHTML = rimOffset.value;
         wheel.rimOffset = rimOffset.value;
-        view();
-        output();
+        update();
     }
 
-    function view () {
+    const update = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        newWheelView.draw();
-        oldWheelView.draw();
-    }
 
-    function output () {
-        var oldWheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
-        var oldWheelSpec = ` ${wheel.tireWidth}/${wheel.tireProfile}R${wheel.tireDiameter}
+        background.drawBackground();
+        oldWheelView.drawWheel();
+        newWheelView.drawWheel();
+
+        const wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
+        const wheelSpec = ` ${wheel.tireWidth}/${wheel.tireProfile}R${wheel.tireDiameter}
         x  ${wheel.rimWidth} ET${wheel.rimOffset}`
-        oldWheelValue.innerHTML = oldWheelSpec;
+        wheelValue.innerHTML = wheelSpec;
     }
 }

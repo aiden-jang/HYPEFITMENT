@@ -1,3 +1,11 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap);
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
+  \*****************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap);
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/reset.css ***!
   \****************************************************************************************************/
@@ -15,54 +23,103 @@ body {
 #suspension, #car {
     display: none;
 }
-/*!*****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/canvas.css ***!
-  \*****************************************************************************************************/
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main.css ***!
+  \***************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap);
+/*!*******************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main.css (1) ***!
+  \*******************************************************************************************************/
 #suspension, #car {
     display: none;
 }
-
-#canvas {
-    /* border: 1px solid black; */
-
-    /* margin-left: auto;
-    margin-right: auto;
-    display: block; */
-    position:absolute;
-    left: 100px;
-    z-index: -1;
+body {
+    background-color: #3CAEA3;
 }
 
 
-/*!*****************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/slider.css ***!
-  \*****************************************************************************************************/
+#canvas{
+    /* border: 1px solid black; */
+    position: fixed;
+    top: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 
-
-.wheels-container{
-    position:relative;
+/* fonts */
+h1, h2, p {
+    color: white;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+}
+.wheels-container {
+    position: fixed;
+    bottom: 0;
+    right:0;
 }
 
 .wheels-container > * {
-    display: flex;
+    display: block;
 }
-.sliders-container{
-    position: relative;
 
+
+
+/* keyboards */
+.keyboards-container {
+    display: block;
+    margin-top: 30px;
+    margin-left: 30px;
 }
+#h-arrows, #v-arrows {
+    width: 60px
+}
+#spacebar {
+    width: 40px;
+}
+.keyboards-container > p{
+    display: block;
+    margin-top: -10px;
+    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.keyboards-container > p > img {
+    vertical-align: middle;
+}
+#h-arrows {
+    margin-left: -4px;
+    margin-right: 8px;
+}
+#v-arrows {
+    margin-top: -10px;
+    margin-right: 5px;
+}
+#spacebar {
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+/*
+----------------------------------
+- slider
+----------------------------------
+*/
 .slider {
     display: block;
-
+    appearance: none;
+    width: 20%;
+    height: 10px;
+    background: #cacaca;
+    opacity: 0.5;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
 }
 
-.slider {
-  appearance: none;
-  width: 10%;
-  height: 10px;
-  background: #c2c2c2;
-  opacity: 0.5;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+.slide-container {
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .slider:hover {
@@ -76,14 +133,20 @@ body {
     background: #082053;
     cursor: pointer;
 }
-  
-/*!***************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main.css ***!
-  \***************************************************************************************************/
-body {
-    background-color: #3CAEA3;
+
+/*
+----------------------------------
+- footer
+----------------------------------
+*/
+.footer {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    margin: auto;
 }
-/*!*************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
-  \*************************************************************************************************************************************/
+
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (2) ***!
+  \*****************************************************************************************************************************************/
 

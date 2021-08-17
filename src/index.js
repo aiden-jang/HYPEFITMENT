@@ -9,8 +9,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
 
-    canvas.width = 750;
-    canvas.height = 500;
+    canvas.width = 1000;
+    canvas.height = 600;
 
     var oldWheel = new Wheel(185,45,15,7.5,38, "old");
     var newWheel = new Wheel(245,40,18,9,15, "new");

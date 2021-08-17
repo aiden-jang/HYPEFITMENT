@@ -1,6 +1,6 @@
 
 
-/* .wheels-container{
+.wheels-container{
     position:relative;
 }
 
@@ -12,9 +12,9 @@
 
 }
 .slider {
-    display: flex;
+    display: block;
 
-} */
+}
 
 .slider {
   appearance: none;

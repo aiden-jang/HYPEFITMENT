@@ -19,9 +19,14 @@
     <img src="./assets/car.png" id="car">
     <img src="./assets/suspension.png" id="suspension">
 
+    <div class="wheels-container">
+        <p id="old-setup-spec">Current Setup: <span id="old-wheel-value"></span></p>
+        <p id="new-setup-spec">New Setup: <span id="new-wheel-value"></span></p>
+    </div>
+    
     <div class="slide-container">
         <div class="old-wheel">
-            <h2>Current wheel</h2>
+            <h2>Current Setup</h2>
             <label for="tire-width">Tire Width: <span id="old-tire-width-value"></span></label>
             <input type="range" min="135" max="375" step="5" class="slider" id="old-tire-width">
     
@@ -39,7 +44,7 @@
         </div>
 
         <div class="new-wheel">
-            <h2>New wheel</h2>
+            <h2>New Setup</h2>
             <label for="tire-width">Tire Width: <span id="new-tire-width-value"></span></label>
             <input type="range" min="135" max="375" step="5" class="slider" id="new-tire-width">
     
@@ -58,15 +63,10 @@
 
     </div>
 
-    <div class="wheels-container">
-        <label for="old-wheel">Old Wheel: <span id="old-wheel-value"></span></label>
-        <label for="new-wheel">New Wheel: <span id="new-wheel-value"></span></label>
-    </div>
-    
     <div class ="keyboards-container">
-        <p><img src="./assets/horizontal_arrows.png" id="h-arrows">Change attributes</p>
-        <p><img src="./assets/vertical_arrows.png" id="v-arrows">Inc / Dec attributes</p>
-        <p><img src="./assets/spacebar.png" id="spacebar">Switch the wheel</p>
+        <p><img src="./assets/horizontal_arrows.png" id="h-arrows">Change Attributes</p>
+        <p><img src="./assets/vertical_arrows.png" id="v-arrows">Inc / Dec Attributes</p>
+        <p><img src="./assets/spacebar.png" id="spacebar">Switch the Setup</p>
     </div>
     <div class="footer">
         <h1>HYPEFITMENT.</h1>

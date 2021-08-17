@@ -2,7 +2,7 @@ export function input (ctx, canvas, wheel, oldWheelView, newWheelView, backgroun
 
 
     var wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
-    var wheelSpec = ` ${wheel.tireWidth}/${wheel.tireProfile}R${wheel.tireDiameter} x  ${wheel.rimWidth} ET${wheel.rimOffset}`
+    var wheelSpec = ` ${wheel.tireWidth} / ${wheel.tireProfile}R${wheel.tireDiameter} x  ${wheel.rimWidth} ET${wheel.rimOffset}`
     wheelValue.innerHTML = wheelSpec;
 
     document.getElementById(`${wheel.status}` + "-tire-width").value = wheel.tireWidth;
@@ -72,7 +72,7 @@ export function input (ctx, canvas, wheel, oldWheelView, newWheelView, backgroun
         newWheelView.drawWheel();
 
         const wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
-        const wheelSpec = ` ${wheel.tireWidth}/${wheel.tireProfile}R${wheel.tireDiameter}
+        const wheelSpec = ` ${wheel.tireWidth} / ${wheel.tireProfile}R${wheel.tireDiameter}
         x  ${wheel.rimWidth} ET${wheel.rimOffset}`
         wheelValue.innerHTML = wheelSpec;
     }

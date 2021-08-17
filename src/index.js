@@ -15,16 +15,16 @@ window.addEventListener("DOMContentLoaded", () => {
     var oldWheel = new Wheel(185,45,15,7.5,38, "old");
     var newWheel = new Wheel(245,40,18,9,15, "new");
     
-
     var background = new Background(ctx);
     
-    ctx.strokeStyle = "red";
+    ctx.strokeStyle = "#ffbf5c";
     var oldWheelView = new View(ctx, oldWheel);
-    ctx.strokeStyle = "blue";
+    ctx.strokeStyle = "#7e61ff";
     var newWheelView = new View(ctx, newWheel);
+    
     input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
     input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
-
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     window.addEventListener("keydown", e => {
         if(["Tab", "Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
             e.preventDefault();
@@ -34,8 +34,6 @@ window.addEventListener("DOMContentLoaded", () => {
     var index = 0;
 
     document.addEventListener("keydown", e => {
-        // control(e, index, oldWheel, newWheel);        
-
     if (e.code === "Space") {
         if (index <= 4) {
             index = 5;
@@ -109,6 +107,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
         input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
         input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
+        
         update();
      });
 
@@ -117,7 +116,6 @@ window.addEventListener("DOMContentLoaded", () => {
         background.drawBackground();
         oldWheelView.drawWheel();
         newWheelView.drawWheel();
-        
     };
 
     const currentByIndex = (idx) => {
@@ -152,6 +150,9 @@ window.addEventListener("DOMContentLoaded", () => {
                 break;
             case 9:
                 target = "new-rim-offset";
+                break;
+            default:
+                // nothing
                 break;
         }
 

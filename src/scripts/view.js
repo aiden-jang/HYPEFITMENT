@@ -2,8 +2,8 @@ export default class View {
     constructor(ctx, wheel) {
         this.ctx = ctx;
         this.wheel = wheel;
-        this.rimColor = this.ctx.strokeStyle;
-        this.ctx.lineWidth = 2.5;
+        this.strokeStyleRim = this.ctx.strokeStyle;
+        this.ctx.lineWidth = 4;
 
         this.drawWheel();
     }
@@ -33,7 +33,7 @@ export default class View {
     }
 
     drawRim(){
-        this.ctx.strokeStyle = this.rimColor;
+        this.ctx.strokeStyle = this.strokeStyleRim;
 
         this.ctx.beginPath();
         this.ctx.setLineDash([]);
@@ -76,7 +76,11 @@ export default class View {
     }
 
     drawTire() {
-        this.ctx.strokeStyle = "black";
+        if (this.strokeStyleRim === "#ffbf5c") {
+            this.ctx.strokeStyle = "#997131";
+        } else {
+            this.ctx.strokeStyle = "#493896";
+        }
         this.ctx.setLineDash([]);
         // top tire
         this.ctx.beginPath();

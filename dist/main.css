@@ -30,24 +30,39 @@ body {
 /*!*******************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main.css (1) ***!
   \*******************************************************************************************************/
+/*
+----------------------------------
+- Load and hide images
+----------------------------------
+*/
 #suspension, #car {
     display: none;
 }
+
+
 body {
-    background-color: #3CAEA3;
+    background-color: #5fc0b6;
 }
 
-
+/*
+----------------------------------
+- canvas
+----------------------------------
+*/
 #canvas{
     /* border: 1px solid black; */
     position: fixed;
-    top: 5%;
+    top: 0;
     left: 0;
     right: 0;
     margin: auto;
 }
 
-/* fonts */
+/*
+----------------------------------
+- fonts
+----------------------------------
+*/
 h1, h2, p {
     color: white;
 }
@@ -55,50 +70,81 @@ h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 60px;
 }
+
+/*
+----------------------------------
+- specs 
+----------------------------------
+*/
 .wheels-container {
     position: fixed;
-    bottom: 0;
-    right:0;
+    /* top: 0px;
+    margin-left: 25%; */
+    bottom: 15%;
+    right: 20px;
 }
 
 .wheels-container > * {
-    display: block;
+    display: inline;
+    font-size: 20px;
+    font-weight: bold;
+}
+#old-setup-spec {
+    background: rgba(255, 191, 92, 1);
+    padding:6px;
+}
+#new-setup-spec {
+    background: rgba(126, 97, 255, 1);
+    padding:6px;
 }
 
 
-
-/* keyboards */
+/*
+----------------------------------
+- keyboards
+----------------------------------
+*/
 .keyboards-container {
     display: block;
     margin-top: 30px;
     margin-left: 30px;
+    background: rgba(226, 226, 226, 0.3);
+    width: 220px;
+    height: 130px;
+    border-radius: 20px;
 }
+
 #h-arrows, #v-arrows {
     width: 60px
 }
+
 #spacebar {
     width: 40px;
 }
+
 .keyboards-container > p{
+    text-align: center;
     display: block;
     margin-top: -10px;
     font-weight: 400;
     font-family: 'Josefin Sans', sans-serif;
 }
+
 .keyboards-container > p > img {
     vertical-align: middle;
 }
+
 #h-arrows {
-    margin-left: -4px;
-    margin-right: 8px;
+    margin-left: -15px;
 }
+
 #v-arrows {
     margin-top: -10px;
-    margin-right: 5px;
 }
+
 #spacebar {
-    margin-left: 5px;
-    margin-right: 20px;
+    margin-left: -10px;
+    margin-right: 15px;
 }
 
 /*
@@ -111,7 +157,7 @@ h1 {
     appearance: none;
     width: 20%;
     height: 10px;
-    background: #cacaca;
+    background: #e0e0e0;
     opacity: 0.5;
     -webkit-transition: .2s;
     transition: opacity .2s;
@@ -120,18 +166,26 @@ h1 {
 .slide-container {
     margin-top: 20px;
     margin-left: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-weight:600;
+    line-height: 1.3;
+
 }
 
 .slider:hover {
     opacity: 1;
 }
-
 .slider::-webkit-slider-thumb {
     appearance: none;
     width: 15px;
     height: 15px;
     background: #082053;
     cursor: pointer;
+}
+
+.new-wheel {
+    margin-top: 30px;
 }
 
 /*

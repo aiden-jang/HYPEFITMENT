@@ -3,6 +3,7 @@ import { control } from "./scripts/control";
 import View from "./scripts/view";
 import Wheel from "./scripts/wheel"
 import Background from "./scripts/background"
+import Performance from "./scripts/performance"
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -116,6 +117,7 @@ window.addEventListener("DOMContentLoaded", () => {
         background.drawBackground();
         oldWheelView.drawWheel();
         newWheelView.drawWheel();
+        update_performance();
     };
 
     const currentByIndex = (idx) => {
@@ -161,4 +163,21 @@ window.addEventListener("DOMContentLoaded", () => {
             document.getElementById(target).style.opacity = "0.5";
        }, 500);
     }
+
+
+
+
+
+
+    var performance = new Performance(oldWheel, newWheel);
+
+const update_performance = () => {
+    var test = document.getElementsByClassName("performances-container")
+    console.log(test)
+    if (oldWheel.tireWidth < newWheel.tireWidth) {
+        document.getElementById("dry-grip").style.color = "green";
+    } else if (oldWheel.tireWidth > newWheel.tireWidth) {
+        document.getElementById("dry-grip").style.color = "red";
+    }
+}
 });

@@ -9,27 +9,17 @@
 /*!****************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/reset.css ***!
   \****************************************************************************************************/
-/* reset css file */
-
-h1, h2, h3, p, span, body, html, div {
-    padding: 0;
-    margin: 0;
-}
-
-body {
-    font-family: sans-serif;
-}
-
-#suspension, #car {
-    display: none;
+h1, h2, p, span, body, html, div, canvas, header, footer {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /*!***************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main.css ***!
   \***************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap);
-/*!*******************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main.css (1) ***!
-  \*******************************************************************************************************/
 /*
 ----------------------------------
 - Load and hide images
@@ -39,6 +29,12 @@ body {
     display: none;
 }
 
+
+/*
+----------------------------------
+- body
+----------------------------------
+*/
 
 body {
     background-color: #5fc0b6;
@@ -70,7 +66,9 @@ h1 {
     font-family: 'Raleway', sans-serif;
     font-size: 60px;
 }
-
+h2 {
+    font-size: 18px;
+}
 /*
 ----------------------------------
 - specs 
@@ -88,6 +86,7 @@ h1 {
     display: inline;
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
 }
 #old-setup-spec {
     background: rgba(255, 191, 92, 1);
@@ -106,11 +105,11 @@ h1 {
 */
 .keyboards-container {
     display: block;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-left: 30px;
     background: rgba(226, 226, 226, 0.3);
-    width: 220px;
-    height: 130px;
+    width: 230px;
+    height: 120px;
     border-radius: 20px;
 }
 
@@ -125,7 +124,7 @@ h1 {
 .keyboards-container > p{
     text-align: center;
     display: block;
-    margin-top: -10px;
+    margin-top: -15px;
     font-weight: 400;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -143,8 +142,9 @@ h1 {
 }
 
 #spacebar {
-    margin-left: -10px;
-    margin-right: 15px;
+    margin-left: -30px;
+    margin-right: 20px;
+
 }
 
 /*
@@ -186,6 +186,24 @@ h1 {
 
 .new-wheel {
     margin-top: 30px;
+}
+/*
+----------------------------------
+- performance changes
+----------------------------------
+*/
+.performances-container {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    /* display: none; */
+    text-align: center;
+}
+.performances-container > * {
+    padding: 5px;
+    margin-top: 5px;
+    background:rgba(255, 191, 92, 1);
 }
 
 /*

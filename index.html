@@ -20,13 +20,13 @@
     <img src="./assets/suspension.png" id="suspension">
 
     <div class="wheels-container">
-        <p id="old-setup-spec">Current Setup: <span id="old-wheel-value"></span></p>
-        <p id="new-setup-spec">New Setup: <span id="new-wheel-value"></span></p>
+        <p id="old-setup-spec">The Current Setup: <span id="old-wheel-value"></span></p>
+        <p id="new-setup-spec">The New Setup: <span id="new-wheel-value"></span></p>
     </div>
     
     <div class="slide-container">
         <div class="old-wheel">
-            <h2>Current Setup</h2>
+            <h2>The Current Setup</h2>
             <label for="tire-width">Tire Width: <span id="old-tire-width-value"></span></label>
             <input type="range" min="135" max="375" step="5" class="slider" id="old-tire-width">
     
@@ -44,7 +44,7 @@
         </div>
 
         <div class="new-wheel">
-            <h2>New Setup</h2>
+            <h2>The New Setup</h2>
             <label for="tire-width">Tire Width: <span id="new-tire-width-value"></span></label>
             <input type="range" min="135" max="375" step="5" class="slider" id="new-tire-width">
     
@@ -58,16 +58,30 @@
             <input type="range" min="4" max="12.5" step="0.5" class="slider" id="new-rim-width">
     
             <label for="rim-offset">Rim Offset: <span id="new-rim-offset-value"></span></label>
-            <input type="range" min="-65" max="125" step="1" class="slider" id="new-rim-offset">
+            <input type="range" min="-65" max="80" step="1" class="slider" id="new-rim-offset">
         </div>
 
     </div>
 
     <div class ="keyboards-container">
-        <p><img src="./assets/horizontal_arrows.png" id="h-arrows">Change Attributes</p>
-        <p><img src="./assets/vertical_arrows.png" id="v-arrows">Inc / Dec Attributes</p>
+        <p><img src="./assets/horizontal_arrows.png" id="h-arrows">Change the Attributes</p>
+        <p><img src="./assets/vertical_arrows.png" id="v-arrows">Inc / Dec the Attributes</p>
         <p><img src="./assets/spacebar.png" id="spacebar">Switch the Setup</p>
     </div>
+
+    
+    <div class ="performances-container">
+        <p id="ride-comfort">Ride Comfort</p>
+        <p id="ride-noise">Ride Noise</p>
+        <p id="wet-grip">Wet Grip</p>
+        <p id="dry-grip">Dry Grip</p>
+        <p id="looks">Looks</p>
+        <p id="handling">Handling</p>
+        <p id="fuel-efficiency">Fuel Efficiency</p>
+        <p id="cost">Cost</p>
+        <p id="weight">Weight</p>
+    </div>
+
     <div class="footer">
         <h1>HYPEFITMENT.</h1>
         <!-- <a href="#" class="fa fa-linkedin" id="linkedin"></a>

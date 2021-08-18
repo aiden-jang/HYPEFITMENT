@@ -18,11 +18,6 @@ body {
     background-color: #5fc0b6;
 }
 
-/*
-----------------------------------
-- instruction
-----------------------------------
-*/
 
 /*
 ----------------------------------
@@ -52,6 +47,55 @@ h1 {
 }
 h2 {
     font-size: 18px;
+}
+p {
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+/*
+----------------------------------
+- instruction
+----------------------------------
+*/
+.inst {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0,0,0.7); 
+    
+  }
+.inst > .content {
+    background-color: #c7b77f;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid rgb(150, 150, 150);
+    width: 50%;
+    height:50%;
+  }
+.close {
+    color:rgb(0, 25, 54);
+    float: right;
+    font-size: 28px;
+    font-weight: bolder;
+}
+.close:hover, .close:focus {
+  color: rgb(211, 211, 211);
+  cursor: pointer;
+}
+#inst-title{
+    color:rgb(97, 77, 77);
+}
+#inst-content {
+    color:black;
+    font-weight:700;
+    font-family: 'Josefin Sans', sans-serif;
+    color:rgb(0, 25, 54);
+    font-size:17px;
 }
 /*
 ----------------------------------
@@ -203,6 +247,7 @@ h2 {
     bottom: 2%;
     right: 2%;
     margin: auto;
+
 }
 
 .help {
@@ -221,6 +266,11 @@ h2 {
 
 #about {
     font-weight: bolder;
+    background-color:transparent;
+    border: none;
+    padding:0px;
+    cursor: pointer;
+
 }
 
 #linkedin:hover, #github:hover, #about:hover {

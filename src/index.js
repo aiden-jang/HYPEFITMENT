@@ -222,5 +222,23 @@ const update_performance = () => {
     }
 }
 
+var inst = document.getElementById("inst-container");
+var btn = document.getElementById("about");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    inst.style.display = "block";
+    // document.getElementById("main-blur").style.filter="blur(4px)";
+  }
+  span.onclick = function() {
+    inst.style.display = "none";
+    // document.getElementById("main-blur").style.filter="blur(0)";
 
+  }
+  window.onclick = function(event) {
+    if (event.target == inst) {
+      inst.style.display = "none";
+    //   document.getElementById("main-blur").style.filter="blur(0)";
+
+    }
+  }
 });

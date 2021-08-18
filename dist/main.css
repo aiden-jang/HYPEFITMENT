@@ -29,17 +29,14 @@ h1, h2, p, span, body, html, div, canvas, header, footer {
     display: none;
 }
 
-
 /*
 ----------------------------------
 - body
 ----------------------------------
 */
-
 body {
     background-color: #5fc0b6;
 }
-
 
 /*
 ----------------------------------
@@ -47,7 +44,6 @@ body {
 ----------------------------------
 */
 #canvas{
-    /* border: 1px solid black; */
     position: fixed;
     top: 0;
     left: 0;
@@ -62,6 +58,7 @@ body {
 */
 h1, h2, p {
     color: white;
+    font-family: 'Josefin Sans', sans-serif;
 }
 h1 {
     font-family: 'Raleway', sans-serif;
@@ -70,16 +67,13 @@ h1 {
 h2 {
     font-size: 18px;
 }
-p {
-    font-family: 'Josefin Sans', sans-serif;
 
-}
 /*
 ----------------------------------
 - instruction
 ----------------------------------
 */
-.inst {
+.instruction-container {
     display: none;
     position: fixed;
     z-index: 1;
@@ -89,71 +83,73 @@ p {
     width: 100%;
     height: 100%; 
     background-color: rgba(0,0,0,0.7); 
-    
-  }
-.inst > .content {
+}
+
+.instruction-container > .instruction-content {
     background-color: #c7b77f;
     margin: auto;
     padding: 20px;
     border: 1px solid rgb(150, 150, 150);
     width: 50%;
     height:50%;
-  }
+}
+
 .close {
     color:rgb(0, 25, 54);
     float: right;
     font-size: 28px;
     font-weight: bolder;
 }
+
 .close:hover, .close:focus {
-  color: rgb(211, 211, 211);
+  color: rgb(177, 134, 134);
   cursor: pointer;
 }
-#inst-title{
+
+.instruction-content > h1 {
     color:rgb(97, 77, 77);
 }
-#inst-content {
+
+.instruction-content > p {
     color:black;
     font-weight:700;
-    font-family: 'Josefin Sans', sans-serif;
     color:rgb(0, 25, 54);
     font-size:17px;
 }
+
 /*
 ----------------------------------
-- specs 
+- specs viewer
 ----------------------------------
 */
-.wheels-container {
+.wheel-container {
     position: fixed;
-    /* top: 0px;
-    margin-left: 25%; */
     bottom: 100px;
     right: 20px;
 }
 
-.wheels-container > * {
+.wheel-container > * {
     display: inline;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Josefin Sans', sans-serif;
 }
+
 #old-setup-spec {
     background: rgba(255, 191, 92, 1);
     padding:6px;
 }
+
 #new-setup-spec {
     background: rgb(141, 117, 250);
     padding:6px;
 }
 
-
 /*
 ----------------------------------
-- keyboards
+- keyboard instruction
 ----------------------------------
 */
-.keyboards-container {
+.keyboard-container {
     display: block;
     margin-top: 40px;
     margin-left: 30px;
@@ -163,38 +159,31 @@ p {
     border-radius: 20px;
 }
 
-#h-arrows, #v-arrows {
-    width: 60px
-}
-
-#spacebar {
-    width: 40px;
-}
-
-.keyboards-container > p{
+.keyboard-container > p {
     text-align: center;
     display: block;
     margin-top: -15px;
     font-weight: 400;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
-.keyboards-container > p > img {
+.keyboard-container > p > img {
     vertical-align: middle;
 }
 
 #h-arrows {
     margin-left: -15px;
+    width: 60px
 }
 
 #v-arrows {
     margin-top: -10px;
+    width: 60px
 }
 
 #spacebar {
+    width: 40px;
     margin-left: -30px;
     margin-right: 20px;
-
 }
 
 /*
@@ -216,11 +205,10 @@ p {
 .slide-container {
     margin-top: 20px;
     margin-left: 20px;
-    font-family: 'Josefin Sans', sans-serif;
     color: white;
-    font-weight:600;
+    font-weight: 600;
     line-height: 1.3;
-
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .slider:hover {
@@ -237,22 +225,20 @@ p {
 .new-wheel {
     margin-top: 30px;
 }
+
 /*
 ----------------------------------
 - performance changes
 ----------------------------------
 */
-.performances-container {
+.performance-container {
     position: fixed;
     top: 10px;
     right: 20px;
-    font-family: 'Josefin Sans', sans-serif;
     text-align: center;
-    
     display: none;
-
 }
-.performances-container > * {
+.performance-container > * {
     padding: 8px;
     margin-top: 10px;
     border-radius: 5px;
@@ -269,33 +255,30 @@ p {
     bottom: 2%;
     right: 2%;
     margin: auto;
-
 }
 
 .help {
     position: fixed;
     bottom: 140px;
     right: 20px;
- 
 }
 
-#linkedin, #github, #about{
+#linkedin, #github, #instruction{
     color: white;
     margin-right: 20px;
     font-size: 30px;
     text-decoration: none;
 }
 
-#about {
+#instruction {
     font-weight: bolder;
     background-color:transparent;
     border: none;
     padding:0px;
     cursor: pointer;
-
 }
 
-#linkedin:hover, #github:hover, #about:hover {
+#linkedin:hover, #github:hover, #instruction:hover {
     opacity: 0.7;
 }
 /*!*****************************************************************************************************************************************!*\

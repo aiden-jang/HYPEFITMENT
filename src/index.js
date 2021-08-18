@@ -163,14 +163,8 @@ window.addEventListener("DOMContentLoaded", () => {
        }, 500);
     }
 
-
-
-
-
-
-
 const update_performance = () => {
-    var performances = document.getElementsByClassName("performances-container");
+    var performances = document.getElementsByClassName("performance-container");
     for (let i = 0; i < performances.length; i++) {
         performances[i].style.display = "block";
     }
@@ -222,23 +216,11 @@ const update_performance = () => {
     }
 }
 
-var inst = document.getElementById("inst-container");
-var btn = document.getElementById("about");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-    inst.style.display = "block";
-    // document.getElementById("main-blur").style.filter="blur(4px)";
-  }
-  span.onclick = function() {
-    inst.style.display = "none";
-    // document.getElementById("main-blur").style.filter="blur(0)";
-
-  }
-  window.onclick = function(event) {
-    if (event.target == inst) {
-      inst.style.display = "none";
-    //   document.getElementById("main-blur").style.filter="blur(0)";
-
-    }
-  }
+    var instruction = document.getElementsByClassName("instruction-container")[0];
+    var button = document.getElementById("instruction");
+    var span = document.getElementsByClassName("close")[0];
+    
+    button.onclick = () => {instruction.style.display = "block";};
+    span.onclick = () => {instruction.style.display = "none";};
+    window.onclick = (e) => { if (e.target === inst) instruction.style.display = "none";};
 });

@@ -17,38 +17,41 @@
     <img src="./assets/car.png" id="car">
     <img src="./assets/suspension.png" id="suspension">
 
-    <div id="inst-container" class="inst">
-        <div class="content">
+    <!-- instruction -->
+    <div class="instruction-container">
+        <div class="instruction-content">
             <span class="close">&times;</span>
-            <h1 id="inst-title">HYPEFITMENT.</h1>
+            <h1>HYPEFITMENT.</h1>
             <br>
             <br>
-            <p id="inst-content">
+            <p>
                 Every tire and rim come in all kinds of different sizes.
                 Have you ever wondered whether your new tire will fit on your new rim and how your new setup will look compared to your old one?
                 Will it poke out more? Will I gain more ride height?
             </p>
             <br>
-            <p id="inst-content">
+            <p>
                 HYPEFITMENT visually calculates and compares the current and new setups. You don't need to waste time googling or searching forums for the specs.
             </p>
             <br>
-            <p id="inst-content">
+            <p>
                 Start by entering the specs of your current rim and tire, and then enter your desired new rim and tire specs. The diagram will be updated lively as well as the overall performance changes column.
                 You can use your mouse or keyboard. Whatever you feel more comfortable with!
             </p>
+            <br>
         </div>
     </div>
 
-    <div class="main-container" id="main-blur">
-
+    <!-- main -->
     <canvas id="canvas"></canvas>
 
-    <div class="wheels-container">
+    <!-- The wheels specs viewer -->
+    <div class="wheel-container">
         <p id="old-setup-spec">The Current Setup: <span id="old-wheel-value"></span></p>
         <p id="new-setup-spec">The New Setup: <span id="new-wheel-value"></span></p>
     </div>
     
+    <!-- The spec sliders -->
     <div class="slide-container">
         <div class="old-wheel">
             <h2>The Current Setup</h2>
@@ -88,13 +91,15 @@
 
     </div>
 
-    <div class ="keyboards-container">
+    <!-- keyboard instruction -->
+    <div class ="keyboard-container">
         <p><img src="./assets/horizontal_arrows.png" id="h-arrows">Change the Attributes</p>
         <p><img src="./assets/vertical_arrows.png" id="v-arrows">Inc / Dec the Attributes</p>
         <p><img src="./assets/spacebar.png" id="spacebar">Switch the Setup</p>
     </div>
     
-    <div class ="performances-container">
+    <!-- performance changes -->
+    <div class ="performance-container">
         <p id="ride-comfort">Ride Comfort</p>
         <p id="ride-noise">Ride Noise</p>
         <p id="wet-traction">Wet Traction</p>
@@ -106,15 +111,14 @@
         <p id="cost">Cost</p>
     </div>
 
+    <!-- about links -->
     <div class="footer">
         <h1>HYPEFITMENT.</h1>
         <div class="help">
-            <button id="about">ⓘ</button>
+            <button id="instruction">ⓘ</button>
             <a href="#" class="fa fa-linkedin" id="linkedin"></a>
             <a href="#" class="fa fa-github" id="github"></a>
         </div>
     </div>
-
-</div>
 </body>
 </html>

@@ -1,5 +1,5 @@
-export function keyboardInput (e) {
-    var index = 0;
+export function keyboardInput (e, index, oldWheel, newWheel) {
+    console.log(`${e.code}`)
 
     if (e.code === "Space") {
         if (index <= 4) {
@@ -70,4 +70,43 @@ export function keyboardInput (e) {
             newWheel.decRimOffset();
         } 
     }
+
+        var target = ""
+        switch(index) {
+            case 0:
+                target = "old-tire-width";
+                break;
+            case 1:
+                target = "old-tire-profile";
+                break;
+            case 2:
+                target = "old-tire-diameter";
+                break;
+            case 3:
+                target = "old-rim-width";
+                break;
+            case 4:
+                target = "old-rim-offset";
+                break;
+            case 5:
+                target = "new-tire-width";
+                break;
+            case 6:
+                target = "new-tire-profile";
+                break;
+            case 7:
+                target = "new-tire-diameter";
+                break;
+            case 8:
+                target = "new-rim-width";
+                break;
+            case 9:
+                target = "new-rim-offset";
+                break;
+        }
+
+    document.getElementById(target).style.opacity = "1";
+    setTimeout(() => {document.getElementById(target).style.opacity = "0.5";}, 500);
+
+    return index;
 }

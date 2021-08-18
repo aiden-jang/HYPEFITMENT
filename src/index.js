@@ -32,12 +32,10 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     }, false);
 
-
+    var index = 0;
     document.addEventListener("keydown", e => {
-        keyboardInput(e);
+        index = keyboardInput(e, index, oldWheel, newWheel);
         
-        currentByIndex(index);
-
         input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
         input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
         
@@ -52,49 +50,7 @@ window.addEventListener("DOMContentLoaded", () => {
         updatePerformance(oldWheel, newWheel);
     };
 
-    const currentByIndex = (idx) => {
-        var target = ""
-        switch(idx) {
-            case 0:
-                target = "old-tire-width";
-                break;
-            case 1:
-                target = "old-tire-profile";
-                break;
-            case 2:
-                target = "old-tire-diameter";
-                break;
-            case 3:
-                target = "old-rim-width";
-                break;
-            case 4:
-                target = "old-rim-offset";
-                break;
-            case 5:
-                target = "new-tire-width";
-                break;
-            case 6:
-                target = "new-tire-profile";
-                break;
-            case 7:
-                target = "new-tire-diameter";
-                break;
-            case 8:
-                target = "new-rim-width";
-                break;
-            case 9:
-                target = "new-rim-offset";
-                break;
-            default:
-                // Do nothing
-                break;
-        }
-
-        document.getElementById(target).style.opacity = "1";
-        setTimeout(function(){
-            document.getElementById(target).style.opacity = "0.5";
-        }, 500);
-    }
+    
 
 
 

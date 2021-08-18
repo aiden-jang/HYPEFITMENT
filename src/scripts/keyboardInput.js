@@ -1,6 +1,4 @@
 export function keyboardInput (e, index, oldWheel, newWheel) {
-    console.log(`${e.code}`)
-
     if (e.code === "Space") {
         if (index <= 4) {
             index = 5;
@@ -25,6 +23,7 @@ export function keyboardInput (e, index, oldWheel, newWheel) {
             index++;
         }
     }
+
     if (e.code === "ArrowRight") {
         if (index === 0) {
             oldWheel.incTireWidth();
@@ -70,43 +69,22 @@ export function keyboardInput (e, index, oldWheel, newWheel) {
             newWheel.decRimOffset();
         } 
     }
+    
+    var targets = [
+        "old-tire-width",
+        "old-tire-profile",
+        "old-tire-diameter",
+        "old-rim-width",
+        "old-rim-offset",
+        "new-tire-width",
+        "new-tire-profile",
+        "new-tire-diameter",
+        "new-rim-width",
+        "new-rim-offset"
+    ]
 
-        var target = ""
-        switch(index) {
-            case 0:
-                target = "old-tire-width";
-                break;
-            case 1:
-                target = "old-tire-profile";
-                break;
-            case 2:
-                target = "old-tire-diameter";
-                break;
-            case 3:
-                target = "old-rim-width";
-                break;
-            case 4:
-                target = "old-rim-offset";
-                break;
-            case 5:
-                target = "new-tire-width";
-                break;
-            case 6:
-                target = "new-tire-profile";
-                break;
-            case 7:
-                target = "new-tire-diameter";
-                break;
-            case 8:
-                target = "new-rim-width";
-                break;
-            case 9:
-                target = "new-rim-offset";
-                break;
-        }
-
-    document.getElementById(target).style.opacity = "1";
-    setTimeout(() => {document.getElementById(target).style.opacity = "0.5";}, 500);
+    document.getElementById(targets[index]).style.opacity = "1";
+    setTimeout(() => {document.getElementById(targets[index]).style.opacity = "0.5";}, 500);
 
     return index;
 }

@@ -26,14 +26,13 @@ window.addEventListener("DOMContentLoaded", () => {
     input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
     input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    window.addEventListener("keydown", e => {
-        if(["Tab", "Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-            e.preventDefault();
-        }
-    }, false);
 
     var index = 0;
     document.addEventListener("keydown", e => {
+        if(["Tab", "Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+            e.preventDefault();
+        }
+        
         index = keyboardInput(e, index, oldWheel, newWheel);
         
         input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
@@ -49,10 +48,6 @@ window.addEventListener("DOMContentLoaded", () => {
         newWheelView.drawWheel();
         updatePerformance(oldWheel, newWheel);
     };
-
-    
-
-
 
     var instruction = document.getElementsByClassName("instruction-container")[0];
     var button = document.getElementById("instruction");

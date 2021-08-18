@@ -35,32 +35,32 @@ export function input (ctx, canvas, wheel, oldWheelView, newWheelView, backgroun
 
     tireWidth.oninput = () => {
         tireWidthValue.innerHTML = tireWidth.value;
-        wheel.tireWidth = tireWidth.value;
+        wheel.tireWidth = parseInt(tireWidth.value);
         update();
     }
 
     tireProfile.oninput = () => {
         tireProfileValue.innerHTML = tireProfile.value;
-        wheel.tireProfile = tireProfile.value;
+        wheel.tireProfile = parseInt(tireProfile.value);
         update();
     }
 
     tireDiameter.oninput = () => {
         tireDiameterValue.innerHTML = tireDiameter.value;
-        wheel.tireDiameter = tireDiameter.value;
+        wheel.tireDiameter = parseInt(tireDiameter.value);
         update();
     }
 
     rimWidth.oninput = () => {
         rimWidthValue.innerHTML = rimWidth.value;
-        wheel.rimWidth = rimWidth.value;
+        wheel.rimWidth = parseInt(rimWidth.value);
         update();
     }
 
 
     rimOffset.oninput = () => {
         rimOffsetValue.innerHTML = rimOffset.value;
-        wheel.rimOffset = rimOffset.value;
+        wheel.rimOffset = parseInt(rimOffset.value);
         update();
     }
 

@@ -176,49 +176,49 @@ const update_performance = () => {
     }
 
     if (oldWheel.tireWidth < newWheel.tireWidth) {
-        document.getElementById("dry-traction").style.background = "#5c87ff";
-        document.getElementById("wet-traction").style.background = "#ff8d5c";
+        document.getElementById("dry-traction").style.background = "#439ecc";
+        document.getElementById("wet-traction").style.background = "#d18666";
     } else if (oldWheel.tireWidth > newWheel.tireWidth) {
-        document.getElementById("dry-traction").style.background = "#ff8d5c";
-        document.getElementById("wet-traction").style.background = "#5c87ff";
+        document.getElementById("dry-traction").style.background = "#d18666";
+        document.getElementById("wet-traction").style.background = "#439ecc";
     }
     if (oldWheel.tireProfile < newWheel.tireProfile) {
-        document.getElementById("ride-comfort").style.background = "#5c87ff";
-        document.getElementById("ride-noise").style.background = "#5c87ff";
+        document.getElementById("ride-comfort").style.background = "#439ecc";
+        document.getElementById("ride-noise").style.background = "#439ecc";
     } else if (oldWheel.tireProfile > newWheel.tireProfile) {
-        document.getElementById("ride-comfort").style.background = "#ff8d5c";
-        document.getElementById("ride-noise").style.background = "#ff8d5c";
+        document.getElementById("ride-comfort").style.background = "#d18666";
+        document.getElementById("ride-noise").style.background = "#d18666";
     }
     if ((oldWheel.rimWidth*25.4)/2-oldWheel.rimOffset < (newWheel.rimWidth*25.4)/2-newWheel.rimOffset) {
-        document.getElementById("stability").style.background = "#5c87ff";
+        document.getElementById("stability").style.background = "#439ecc";
     } else if ((oldWheel.rimWidth*25.4)/2-oldWheel.rimOffset > (newWheel.rimWidth*25.4)/2-newWheel.rimOffset){
-        document.getElementById("stability").style.background = "#ff8d5c";
+        document.getElementById("stability").style.background = "#d18666";
     }
 
   
 
     if (oldWheel.tireDiameter < newWheel.tireDiameter && oldWheel.tireProfile > newWheel.tireProfile) {
-        document.getElementById("handling").style.background = "#5c87ff";
-        document.getElementById("cost").style.background = "#ff8d5c";
+        document.getElementById("handling").style.background = "#439ecc";
+        document.getElementById("cost").style.background = "#d18666";
 
     } else if (oldWheel.tireDiameter > newWheel.tireDiameter && oldWheel.tireProfile < newWheel.tireProfile) {
-        document.getElementById("handling").style.background = "#ff8d5c";
-        document.getElementById("cost").style.background = "#5c87ff";
+        document.getElementById("handling").style.background = "#d18666";
+        document.getElementById("cost").style.background = "#439ecc";
 
     }
 
     if (oldWheel.tireWidth > newWheel.tireWidth) {
-        document.getElementById("fuel-efficiency").style.background = "#5c87ff";
+        document.getElementById("fuel-efficiency").style.background = "#439ecc";
     }
     else if (oldWheel.tireWidth < newWheel.tireWidth) {
-        document.getElementById("fuel-efficiency").style.background = "#ff8d5c";
+        document.getElementById("fuel-efficiency").style.background = "#d18666";
     }
 
 
     if ((oldWheel.rimWidth*25.4)/2-oldWheel.rimOffset < (newWheel.rimWidth*25.4)/2-newWheel.rimOffset && oldWheel.tireDiameter < newWheel.tireDiameter) {
-        document.getElementById("looks").style.background = "#5c87ff";
+        document.getElementById("looks").style.background = "#439ecc";
     } else {
-        document.getElementById("looks").style.background = "#ff8d5c";
+        document.getElementById("looks").style.background = "#d18666";
     }
 }
 

@@ -17,7 +17,7 @@ In HYPEFITMENT, users will be able to:
 * Lock and change the certain specs and see the update.
 * Gain information on how their new setups will affect their cars' overall performance compared to their current setups.
 
-## Wireframes
+## Wireframes 
 
 ![Wireframe](/assets/wireframe.png)
 

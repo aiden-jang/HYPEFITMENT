@@ -1,4 +1,4 @@
-![Logo](/assets/hypefitment-logo.png)
+![Logo](/assets/hypefitment-logo_edited.png)
 
 # HYPEFITMENT
 

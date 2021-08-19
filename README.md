@@ -19,7 +19,7 @@ In HYPEFITMENT, users will be able to:
 
 ## Wireframes 
 
-![Wireframe](/assets/wireframe.png)
+![Wireframes](/assets/wireframes.png)
 
 ## Technologies, Libraries, APIs
 

@@ -1,5 +1,14 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,900&display=swap);
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (1) ***!
+  \*****************************************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap);
+/*!****************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/reset.css ***!
+  \****************************************************************************************************/
 h1, h2, p, span, body, html, div, canvas, header, footer {
 	margin: 0;
 	padding: 0;
@@ -8,6 +17,9 @@ h1, h2, p, span, body, html, div, canvas, header, footer {
 	font: inherit;
 	vertical-align: baseline;
 }
+/*!***************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./src/styles/main.css ***!
+  \***************************************************************************************************/
 /*
 ----------------------------------
 - Load and hide images
@@ -272,6 +284,7 @@ h2 {
 #linkedin:hover, #github:hover, #instruction:hover {
     opacity: 0.7;
 }
+/*!*****************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss (2) ***!
+  \*****************************************************************************************************************************************/
 
-
-/*# sourceMappingURL=main.css.map*/

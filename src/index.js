@@ -2,11 +2,10 @@ import { input } from "./scripts/input";
 import { updatePerformance } from "./scripts/updatePerformance";
 import { keyboardInput } from "./scripts/keyboardInput";
 import View from "./scripts/view";
-import Wheel from "./scripts/wheel"
-import Background from "./scripts/background"
+import Wheel from "./scripts/wheel";
+import Background from "./scripts/background";
 
-
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
 
@@ -55,5 +54,5 @@ window.addEventListener("DOMContentLoaded", () => {
     
     button.onclick = () => {instruction.style.display = "block";};
     span.onclick = () => {instruction.style.display = "none";};
-    window.onclick = (e) => { if (e.target === instruction) instruction.style.display = "none";};
+    document.onclick = (e) => { if (e.target === instruction) instruction.style.display = "none";};
 });

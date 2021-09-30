@@ -94,6 +94,7 @@ h2 {
     color:rgb(0, 25, 54);
     font-size:17px;
 }
+
 #developer {
     float: right;
 }
@@ -195,6 +196,7 @@ h2 {
 .slider:hover {
     opacity: 1;
 }
+
 .slider::-webkit-slider-thumb {
     appearance: none;
     width: 15px;

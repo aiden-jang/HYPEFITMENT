@@ -1,4 +1,4 @@
-export default class View {
+class View {
     constructor(ctx, wheel) {
         this.ctx = ctx;
         this.wheel = wheel;
@@ -125,3 +125,5 @@ export default class View {
         this.ctx.stroke();
     }
 }
+
+export default View;

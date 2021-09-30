@@ -1,4 +1,4 @@
-export default class Wheel {
+class Wheel {
     constructor(tireWidth, tireProfile, tireDiameter, rimWidth, rimOffset, status) {
             this.tireWidth = tireWidth;
             this.tireProfile = tireProfile;
@@ -23,3 +23,5 @@ export default class Wheel {
     incRimOffset () {if (this.rimOffset < 80) this.rimOffset += 1;}
     decRimOffset () {if (this.rimOffset > -65) this.rimOffset -= 1;}
 }
+
+export default Wheel;

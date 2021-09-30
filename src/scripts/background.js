@@ -1,4 +1,4 @@
-export default class Background {
+class Background {
     constructor(ctx) {
         this.ctx = ctx;
         
@@ -27,3 +27,5 @@ export default class Background {
         this.ctx.drawImage(this.suspension, 60, 0, 600, 500);
     }
 }
+
+export default Background;

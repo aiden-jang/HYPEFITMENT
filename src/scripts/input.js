@@ -76,6 +76,6 @@ export function input (ctx, canvas, wheel, oldWheelView, newWheelView, backgroun
         x  ${wheel.rimWidth} ET${wheel.rimOffset}`
         wheelValue.innerHTML = wheelSpec;
 
-        updatePerformance(oldWheelView.wheel,newWheelView.wheel)
+        updatePerformance(oldWheelView.wheel,newWheelView.wheel);
     }
 }

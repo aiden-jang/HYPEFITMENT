@@ -1,6 +1,6 @@
-import { input } from "./scripts/input";
-import { updatePerformance } from "./scripts/updatePerformance";
-import { keyboardInput } from "./scripts/keyboardInput";
+import input from "./scripts/input";
+import updatePerformance from "./scripts/updatePerformance";
+import keyboardInput from "./scripts/keyboardInput";
 import View from "./scripts/view";
 import Wheel from "./scripts/wheel";
 import Background from "./scripts/background";

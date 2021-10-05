@@ -1,6 +1,6 @@
-import { updatePerformance } from "./updatePerformance";
+import updatePerformance from "./updatePerformance";
 
-export const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
+const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
     var wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
     var wheelSpec = ` ${wheel.tireWidth} / ${wheel.tireProfile}R${wheel.tireDiameter} x  ${wheel.rimWidth} ET${wheel.rimOffset}`
     wheelValue.innerHTML = wheelSpec;
@@ -79,3 +79,5 @@ export const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background
         updatePerformance(oldWheelView.wheel,newWheelView.wheel);
     }
 }
+
+export default input;

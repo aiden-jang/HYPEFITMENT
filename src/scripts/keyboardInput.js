@@ -1,4 +1,4 @@
-export const keyboardInput = (e, index, oldWheel, newWheel) => {
+const keyboardInput = (e, index, oldWheel, newWheel) => {
     if (e.code === "Space") {
         if (index <= 4) {
             index = 5;
@@ -88,3 +88,5 @@ export const keyboardInput = (e, index, oldWheel, newWheel) => {
 
     return index;
 }
+
+export default keyboardInput;

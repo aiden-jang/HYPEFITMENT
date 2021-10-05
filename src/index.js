@@ -1,5 +1,5 @@
-import input from "./scripts/input";
 import performance from "./scripts/performance";
+import mouseInput from "./scripts/mouseInput";
 import keyboardInput from "./scripts/keyboardInput";
 import View from "./scripts/view";
 import Wheel from "./scripts/wheel";
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ctx.strokeStyle = "#7e61ff";
     let newWheelView = new View(ctx, newWheel);
     
-    input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
-    input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
+    mouseInput(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
+    mouseInput(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     let index = 0;
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
         index = keyboardInput(e, index, oldWheel, newWheel);
         
-        input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
-        input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
+        mouseInput(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
+        mouseInput(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
         
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         background.drawBackground();

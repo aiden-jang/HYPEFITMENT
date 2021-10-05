@@ -1,6 +1,6 @@
 import performance from "./performance";
 
-const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
+const mouseInput = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
     let wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
     let wheelSpec = ` ${wheel.tireWidth} / ${wheel.tireProfile}R${wheel.tireDiameter} x  ${wheel.rimWidth} ET${wheel.rimOffset}`
     wheelValue.innerHTML = wheelSpec;
@@ -79,4 +79,4 @@ const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
     }
 }
 
-export default input;
+export default mouseInput;

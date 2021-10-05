@@ -5,7 +5,8 @@ const keyboardInput = (e, index, oldWheel, newWheel) => {
         } else {
             index = 0;
         }
-    }    
+    }
+    
     if (e.code === "ArrowUp") {
         if (index === 0) {
             index = 4;

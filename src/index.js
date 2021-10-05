@@ -4,6 +4,7 @@ import keyboardInput from "./scripts/keyboardInput";
 import View from "./scripts/view";
 import Wheel from "./scripts/wheel";
 import Background from "./scripts/background";
+import modal from "./scripts/modal";
 
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("canvas");
@@ -48,11 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
         performance(oldWheel, newWheel);
     };
 
-    let instruction = document.getElementsByClassName("instruction-container")[0];
-    let button = document.getElementById("instruction");
-    let span = document.getElementsByClassName("close")[0];
-    
-    button.onclick = () => {instruction.style.display = "block";};
-    span.onclick = () => {instruction.style.display = "none";};
-    document.onclick = (e) => { if (e.target === instruction) instruction.style.display = "none";};
+    modal();
 });

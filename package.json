@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skylineciel/HYPEFITMENT.git"
+    "url": "git+https://github.com/aiden-jang/HYPEFITMENT.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/skylineciel/HYPEFITMENT/issues"
+    "url": "https://github.com/aiden-jang/HYPEFITMENT/issues"
   },
-  "homepage": "https://github.com/skylineciel/HYPEFITMENT#readme",
+  "homepage": "https://github.com/aiden-jang/HYPEFITMENT#readme",
   "dependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",

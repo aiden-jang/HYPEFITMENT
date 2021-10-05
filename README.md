@@ -2,7 +2,7 @@
 
 # HYPEFITMENT
 
-[Live Site](https://skylineciel.github.io/HYPEFITMENT/ "HYPEFITMENT")
+[Live Site](https://aiden-jang.github.io/HYPEFITMENT/ "HYPEFITMENT")
 
 ## Background
 

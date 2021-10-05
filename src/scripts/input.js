@@ -1,8 +1,8 @@
-import updatePerformance from "./updatePerformance";
+import performance from "./performance";
 
 const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
-    var wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
-    var wheelSpec = ` ${wheel.tireWidth} / ${wheel.tireProfile}R${wheel.tireDiameter} x  ${wheel.rimWidth} ET${wheel.rimOffset}`
+    let wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
+    let wheelSpec = ` ${wheel.tireWidth} / ${wheel.tireProfile}R${wheel.tireDiameter} x  ${wheel.rimWidth} ET${wheel.rimOffset}`
     wheelValue.innerHTML = wheelSpec;
 
     document.getElementById(`${wheel.status}` + "-tire-width").value = wheel.tireWidth;
@@ -11,20 +11,20 @@ const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
     document.getElementById(`${wheel.status}` + "-rim-width").value = wheel.rimWidth;
     document.getElementById(`${wheel.status}` + "-rim-offset").value = wheel.rimOffset;
 
-    var tireWidth = document.getElementById(`${wheel.status}` + "-tire-width");
-    var tireWidthValue = document.getElementById(`${wheel.status}` + "-tire-width-value");
+    let tireWidth = document.getElementById(`${wheel.status}` + "-tire-width");
+    let tireWidthValue = document.getElementById(`${wheel.status}` + "-tire-width-value");
 
-    var tireProfile = document.getElementById(`${wheel.status}` + "-tire-profile");
-    var tireProfileValue = document.getElementById(`${wheel.status}` + "-tire-profile-value");
+    let tireProfile = document.getElementById(`${wheel.status}` + "-tire-profile");
+    let tireProfileValue = document.getElementById(`${wheel.status}` + "-tire-profile-value");
 
-    var tireDiameter = document.getElementById(`${wheel.status}` + "-tire-diameter");
-    var tireDiameterValue = document.getElementById(`${wheel.status}` + "-tire-diameter-value");
+    let tireDiameter = document.getElementById(`${wheel.status}` + "-tire-diameter");
+    let tireDiameterValue = document.getElementById(`${wheel.status}` + "-tire-diameter-value");
 
-    var rimWidth = document.getElementById(`${wheel.status}` + "-rim-width");
-    var rimWidthValue = document.getElementById(`${wheel.status}` + "-rim-width-value");
+    let rimWidth = document.getElementById(`${wheel.status}` + "-rim-width");
+    let rimWidthValue = document.getElementById(`${wheel.status}` + "-rim-width-value");
 
-    var rimOffset = document.getElementById(`${wheel.status}` + "-rim-offset");
-    var rimOffsetValue = document.getElementById(`${wheel.status}` + "-rim-offset-value");
+    let rimOffset = document.getElementById(`${wheel.status}` + "-rim-offset");
+    let rimOffsetValue = document.getElementById(`${wheel.status}` + "-rim-offset-value");
 
     tireWidthValue.innerHTML = tireWidth.value;
     tireProfileValue.innerHTML = tireProfile.value;
@@ -76,7 +76,7 @@ const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
         x  ${wheel.rimWidth} ET${wheel.rimOffset}`
         wheelValue.innerHTML = wheelSpec;
 
-        updatePerformance(oldWheelView.wheel,newWheelView.wheel);
+        performance(oldWheelView.wheel,newWheelView.wheel);
     }
 }
 

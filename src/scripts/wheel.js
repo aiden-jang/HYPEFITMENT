@@ -1,12 +1,12 @@
 class Wheel {
     constructor(tireWidth, tireProfile, tireDiameter, rimWidth, rimOffset, status) {
-            this.tireWidth = tireWidth;
-            this.tireProfile = tireProfile;
-            this.tireDiameter = tireDiameter;
-            this.rimWidth = rimWidth;
-            this.rimOffset = rimOffset;
-            this.status = status;
-        }
+        this.tireWidth = tireWidth;
+        this.tireProfile = tireProfile;
+        this.tireDiameter = tireDiameter;
+        this.rimWidth = rimWidth;
+        this.rimOffset = rimOffset;
+        this.status = status;
+    }
     
     incTireWidth () {if (this.tireWidth < 375) this.tireWidth += 5;}
     decTireWidth () {if (this.tireWidth > 135) this.tireWidth -= 5;}

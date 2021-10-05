@@ -9,9 +9,7 @@ class Background {
     }
 
     drawBackground () {
-        this.car.onload = () => {
-            this.drawCar();
-        }
+        this.car.onload = () => { this.drawCar(); }
             
         this.ctx.globalAlpha = 0.4;
         this.drawCar();
@@ -19,13 +17,9 @@ class Background {
         this.drawSuspension();
     }
 
-    drawCar() {
-        this.ctx.drawImage(this.car, 200, -150, 800, 600);
-    }
+    drawCar() { this.ctx.drawImage(this.car, 200, -150, 800, 600); }
 
-    drawSuspension() {
-        this.ctx.drawImage(this.suspension, 60, 0, 600, 500);
-    }
+    drawSuspension() { this.ctx.drawImage(this.suspension, 60, 0, 600, 500); }
 }
 
 export default Background;

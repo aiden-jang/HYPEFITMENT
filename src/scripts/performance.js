@@ -1,4 +1,4 @@
-const updatePerformance = (oldWheel, newWheel) => {
+const performance = (oldWheel, newWheel) => {
     var performances = document.getElementsByClassName("performance-container");
     performances.forEach(performance => {performance.style.display = "block";});
     
@@ -49,4 +49,4 @@ const updatePerformance = (oldWheel, newWheel) => {
     }
 }
 
-export default updatePerformance;
+export default performance;

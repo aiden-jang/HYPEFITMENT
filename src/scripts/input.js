@@ -57,7 +57,6 @@ const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
         update();
     }
 
-
     rimOffset.oninput = () => {
         rimOffsetValue.innerHTML = rimOffset.value;
         wheel.rimOffset = parseInt(rimOffset.value);
@@ -73,7 +72,7 @@ const input = (ctx, canvas, wheel, oldWheelView, newWheelView, background) => {
 
         const wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
         const wheelSpec = ` ${wheel.tireWidth} / ${wheel.tireProfile}R${wheel.tireDiameter}
-        x  ${wheel.rimWidth} ET${wheel.rimOffset}`
+        x  ${wheel.rimWidth} ET${wheel.rimOffset}`;
         wheelValue.innerHTML = wheelSpec;
 
         performance(oldWheelView.wheel,newWheelView.wheel);

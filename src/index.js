@@ -8,10 +8,10 @@ import modal from "./scripts/modal";
 
 document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d");
-
     canvas.width = 1000;
     canvas.height = 600;
+
+    const ctx = canvas.getContext("2d");
 
     let oldWheel = new Wheel(185,45,15,7.5,38, "old");
     let newWheel = new Wheel(245,40,18,9,15, "new");
@@ -38,16 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
         input(ctx, canvas, oldWheel, oldWheelView, newWheelView, background);
         input(ctx, canvas, newWheel, oldWheelView, newWheelView, background);
         
-        update();
-    });
-    
-    const update = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         background.drawBackground();
         oldWheelView.drawWheel();
         newWheelView.drawWheel();
         performance(oldWheel, newWheel);
-    };
+    });
 
     modal();
 });

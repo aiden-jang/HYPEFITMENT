@@ -37,6 +37,10 @@ In HYPEFITMENT, users will be able to:
 
 ## Code Snippet
 
+### Vanilla DOM API
+
+Every time when there is a change in the specs, this function will be called. Using DOM Manipulation in Vanilla JavaScript, it successfully renders and updates the new specs on the screen immediately.
+
 ```javascript
     const update = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);

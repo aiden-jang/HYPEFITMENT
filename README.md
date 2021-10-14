@@ -34,3 +34,22 @@ In HYPEFITMENT, users will be able to:
 * Webpack
 * Npm
 * DOM API
+
+## Code Snippet
+
+```javascript
+    const update = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        background.drawBackground();
+        oldWheelView.drawWheel();
+        newWheelView.drawWheel();
+
+        const wheelValue = document.getElementById(`${wheel.status}` + "-wheel-value");
+        const wheelSpec = ` ${wheel.tireWidth} / ${wheel.tireProfile}R${wheel.tireDiameter}
+        x  ${wheel.rimWidth} ET${wheel.rimOffset}`;
+        wheelValue.innerHTML = wheelSpec;
+
+        performance(oldWheelView.wheel,newWheelView.wheel);
+    }
+```

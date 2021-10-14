@@ -4,6 +4,8 @@
 
 [Live Site](https://aiden-jang.github.io/HYPEFITMENT/ "HYPEFITMENT")
 
+![Screenshot](/assets/hypefitment-screenshot.PNG)
+
 ## Background
 
 Getting that perfect fitment you wanted on your car takes a lot of trial and error. Have you ever wished there was a tool that visually calculates and shows the rim and tire setups before you drop $$$ on them? HYPEFITMENT eliminates the hassle. You do not need to waste time googling or digging in forums on what kind of rims and tires will fit your car or truck.
